@@ -35,9 +35,136 @@ public class MainActivity extends AppCompatActivity {
         // Method (1): add statically created cells
         TextView tv00 = (TextView) findViewById(R.id.textView00);
         TextView tv01 = (TextView) findViewById(R.id.textView01);
+        TextView tv02 = (TextView) findViewById(R.id.textView02);
+        TextView tv03 = (TextView) findViewById(R.id.textView03);
+        TextView tv04 = (TextView) findViewById(R.id.textView04);
+        TextView tv05 = (TextView) findViewById(R.id.textView05);
+        TextView tv06 = (TextView) findViewById(R.id.textView06);
+        TextView tv07 = (TextView) findViewById(R.id.textView07);
+        TextView tv08 = (TextView) findViewById(R.id.textView08);
+        TextView tv09 = (TextView) findViewById(R.id.textView09);
+
         TextView tv10 = (TextView) findViewById(R.id.textView10);
         TextView tv11 = (TextView) findViewById(R.id.textView11);
+        TextView tv12 = (TextView) findViewById(R.id.textView12);
+        TextView tv13 = (TextView) findViewById(R.id.textView13);
+        TextView tv14 = (TextView) findViewById(R.id.textView14);
+        TextView tv15 = (TextView) findViewById(R.id.textView15);
+        TextView tv16 = (TextView) findViewById(R.id.textView16);
+        TextView tv17 = (TextView) findViewById(R.id.textView17);
+        TextView tv18 = (TextView) findViewById(R.id.textView18);
+        TextView tv19 = (TextView) findViewById(R.id.textView19);
 
+        TextView tv20 = (TextView) findViewById(R.id.textView20);
+        TextView tv21 = (TextView) findViewById(R.id.textView21);
+        TextView tv22 = (TextView) findViewById(R.id.textView22);
+        TextView tv23 = (TextView) findViewById(R.id.textView23);
+        TextView tv24 = (TextView) findViewById(R.id.textView24);
+        TextView tv25 = (TextView) findViewById(R.id.textView25);
+        TextView tv26 = (TextView) findViewById(R.id.textView26);
+        TextView tv27 = (TextView) findViewById(R.id.textView27);
+        TextView tv28 = (TextView) findViewById(R.id.textView28);
+        TextView tv29 = (TextView) findViewById(R.id.textView29);
+
+        TextView tv30 = (TextView) findViewById(R.id.textView30);
+        TextView tv31 = (TextView) findViewById(R.id.textView31);
+        TextView tv32 = (TextView) findViewById(R.id.textView32);
+        TextView tv33 = (TextView) findViewById(R.id.textView33);
+        TextView tv34 = (TextView) findViewById(R.id.textView34);
+        TextView tv35 = (TextView) findViewById(R.id.textView35);
+        TextView tv36 = (TextView) findViewById(R.id.textView36);
+        TextView tv37 = (TextView) findViewById(R.id.textView37);
+        TextView tv38 = (TextView) findViewById(R.id.textView38);
+        TextView tv39 = (TextView) findViewById(R.id.textView39);
+
+        TextView tv40 = (TextView) findViewById(R.id.textView40);
+        TextView tv41 = (TextView) findViewById(R.id.textView41);
+        TextView tv42 = (TextView) findViewById(R.id.textView42);
+        TextView tv43 = (TextView) findViewById(R.id.textView43);
+        TextView tv44 = (TextView) findViewById(R.id.textView44);
+        TextView tv45 = (TextView) findViewById(R.id.textView45);
+        TextView tv46 = (TextView) findViewById(R.id.textView46);
+        TextView tv47 = (TextView) findViewById(R.id.textView47);
+        TextView tv48 = (TextView) findViewById(R.id.textView48);
+        TextView tv49 = (TextView) findViewById(R.id.textView49);
+
+        TextView tv50 = (TextView) findViewById(R.id.textView50);
+        TextView tv51 = (TextView) findViewById(R.id.textView51);
+        TextView tv52 = (TextView) findViewById(R.id.textView52);
+        TextView tv53 = (TextView) findViewById(R.id.textView53);
+        TextView tv54 = (TextView) findViewById(R.id.textView54);
+        TextView tv55 = (TextView) findViewById(R.id.textView55);
+        TextView tv56 = (TextView) findViewById(R.id.textView56);
+        TextView tv57 = (TextView) findViewById(R.id.textView57);
+        TextView tv58 = (TextView) findViewById(R.id.textView58);
+        TextView tv59 = (TextView) findViewById(R.id.textView59);
+
+        TextView tv60 = (TextView) findViewById(R.id.textView60);
+        TextView tv61 = (TextView) findViewById(R.id.textView61);
+        TextView tv62 = (TextView) findViewById(R.id.textView62);
+        TextView tv63 = (TextView) findViewById(R.id.textView63);
+        TextView tv64 = (TextView) findViewById(R.id.textView64);
+        TextView tv65 = (TextView) findViewById(R.id.textView65);
+        TextView tv66 = (TextView) findViewById(R.id.textView66);
+        TextView tv67 = (TextView) findViewById(R.id.textView67);
+        TextView tv68 = (TextView) findViewById(R.id.textView68);
+        TextView tv69 = (TextView) findViewById(R.id.textView69);
+
+        TextView tv70 = (TextView) findViewById(R.id.textView70);
+        TextView tv71 = (TextView) findViewById(R.id.textView71);
+        TextView tv72 = (TextView) findViewById(R.id.textView72);
+        TextView tv73 = (TextView) findViewById(R.id.textView73);
+        TextView tv74 = (TextView) findViewById(R.id.textView74);
+        TextView tv75 = (TextView) findViewById(R.id.textView75);
+        TextView tv76 = (TextView) findViewById(R.id.textView76);
+        TextView tv77 = (TextView) findViewById(R.id.textView77);
+        TextView tv78 = (TextView) findViewById(R.id.textView78);
+        TextView tv79 = (TextView) findViewById(R.id.textView79);
+
+        TextView tv80 = (TextView) findViewById(R.id.textView80);
+        TextView tv81 = (TextView) findViewById(R.id.textView81);
+        TextView tv82 = (TextView) findViewById(R.id.textView82);
+        TextView tv83 = (TextView) findViewById(R.id.textView83);
+        TextView tv84 = (TextView) findViewById(R.id.textView84);
+        TextView tv85 = (TextView) findViewById(R.id.textView85);
+        TextView tv86 = (TextView) findViewById(R.id.textView86);
+        TextView tv87 = (TextView) findViewById(R.id.textView87);
+        TextView tv88 = (TextView) findViewById(R.id.textView88);
+        TextView tv89 = (TextView) findViewById(R.id.textView89);
+
+        TextView tv90 = (TextView) findViewById(R.id.textView90);
+        TextView tv91 = (TextView) findViewById(R.id.textView91);
+        TextView tv92 = (TextView) findViewById(R.id.textView92);
+        TextView tv93 = (TextView) findViewById(R.id.textView93);
+        TextView tv94 = (TextView) findViewById(R.id.textView94);
+        TextView tv95 = (TextView) findViewById(R.id.textView95);
+        TextView tv96 = (TextView) findViewById(R.id.textView96);
+        TextView tv97 = (TextView) findViewById(R.id.textView97);
+        TextView tv98 = (TextView) findViewById(R.id.textView98);
+        TextView tv99 = (TextView) findViewById(R.id.textView99);
+
+        TextView tv100 = (TextView) findViewById(R.id.textView100);
+        TextView tv101 = (TextView) findViewById(R.id.textView101);
+        TextView tv102 = (TextView) findViewById(R.id.textView102);
+        TextView tv103 = (TextView) findViewById(R.id.textView103);
+        TextView tv104 = (TextView) findViewById(R.id.textView104);
+        TextView tv105 = (TextView) findViewById(R.id.textView105);
+        TextView tv106 = (TextView) findViewById(R.id.textView106);
+        TextView tv107 = (TextView) findViewById(R.id.textView107);
+        TextView tv108 = (TextView) findViewById(R.id.textView108);
+        TextView tv109 = (TextView) findViewById(R.id.textView109);
+
+        TextView tv110 = (TextView) findViewById(R.id.textView110);
+        TextView tv111 = (TextView) findViewById(R.id.textView111);
+        TextView tv112 = (TextView) findViewById(R.id.textView112);
+        TextView tv113 = (TextView) findViewById(R.id.textView113);
+        TextView tv114 = (TextView) findViewById(R.id.textView114);
+        TextView tv115 = (TextView) findViewById(R.id.textView115);
+        TextView tv116 = (TextView) findViewById(R.id.textView116);
+        TextView tv117 = (TextView) findViewById(R.id.textView117);
+        TextView tv118 = (TextView) findViewById(R.id.textView118);
+        TextView tv119 = (TextView) findViewById(R.id.textView119);
+        //_______________________________________
         tv00.setTextColor(Color.GRAY);
         tv00.setBackgroundColor(Color.GRAY);
         tv00.setOnClickListener(this::onClickTV);
@@ -46,6 +173,38 @@ public class MainActivity extends AppCompatActivity {
         tv01.setBackgroundColor(Color.GRAY);
         tv01.setOnClickListener(this::onClickTV);
 
+        tv02.setTextColor(Color.GRAY);
+        tv02.setBackgroundColor(Color.GRAY);
+        tv02.setOnClickListener(this::onClickTV);
+
+        tv03.setTextColor(Color.GRAY);
+        tv03.setBackgroundColor(Color.GRAY);
+        tv03.setOnClickListener(this::onClickTV);
+
+        tv04.setTextColor(Color.GRAY);
+        tv04.setBackgroundColor(Color.GRAY);
+        tv04.setOnClickListener(this::onClickTV);
+
+        tv05.setTextColor(Color.GRAY);
+        tv05.setBackgroundColor(Color.GRAY);
+        tv05.setOnClickListener(this::onClickTV);
+
+        tv06.setTextColor(Color.GRAY);
+        tv06.setBackgroundColor(Color.GRAY);
+        tv06.setOnClickListener(this::onClickTV);
+
+        tv07.setTextColor(Color.GRAY);
+        tv07.setBackgroundColor(Color.GRAY);
+        tv07.setOnClickListener(this::onClickTV);
+
+        tv08.setTextColor(Color.GRAY);
+        tv08.setBackgroundColor(Color.GRAY);
+        tv08.setOnClickListener(this::onClickTV);
+
+        tv09.setTextColor(Color.GRAY);
+        tv09.setBackgroundColor(Color.GRAY);
+        tv09.setOnClickListener(this::onClickTV);
+        //_______________________________________
         tv10.setTextColor(Color.GRAY);
         tv10.setBackgroundColor(Color.GRAY);
         tv10.setOnClickListener(this::onClickTV);
@@ -54,54 +213,624 @@ public class MainActivity extends AppCompatActivity {
         tv11.setBackgroundColor(Color.GRAY);
         tv11.setOnClickListener(this::onClickTV);
 
+        tv12.setTextColor(Color.GRAY);
+        tv12.setBackgroundColor(Color.GRAY);
+        tv12.setOnClickListener(this::onClickTV);
+
+        tv13.setTextColor(Color.GRAY);
+        tv13.setBackgroundColor(Color.GRAY);
+        tv13.setOnClickListener(this::onClickTV);
+
+        tv14.setTextColor(Color.GRAY);
+        tv14.setBackgroundColor(Color.GRAY);
+        tv14.setOnClickListener(this::onClickTV);
+
+        tv15.setTextColor(Color.GRAY);
+        tv15.setBackgroundColor(Color.GRAY);
+        tv15.setOnClickListener(this::onClickTV);
+
+        tv16.setTextColor(Color.GRAY);
+        tv16.setBackgroundColor(Color.GRAY);
+        tv16.setOnClickListener(this::onClickTV);
+
+        tv17.setTextColor(Color.GRAY);
+        tv17.setBackgroundColor(Color.GRAY);
+        tv17.setOnClickListener(this::onClickTV);
+
+        tv18.setTextColor(Color.GRAY);
+        tv18.setBackgroundColor(Color.GRAY);
+        tv18.setOnClickListener(this::onClickTV);
+
+        tv19.setTextColor(Color.GRAY);
+        tv19.setBackgroundColor(Color.GRAY);
+        tv19.setOnClickListener(this::onClickTV);
+        //_______________________________________
+        tv20.setTextColor(Color.GRAY);
+        tv20.setBackgroundColor(Color.GRAY);
+        tv20.setOnClickListener(this::onClickTV);
+
+        tv21.setTextColor(Color.GRAY);
+        tv21.setBackgroundColor(Color.GRAY);
+        tv21.setOnClickListener(this::onClickTV);
+
+        tv22.setTextColor(Color.GRAY);
+        tv22.setBackgroundColor(Color.GRAY);
+        tv22.setOnClickListener(this::onClickTV);
+
+        tv23.setTextColor(Color.GRAY);
+        tv23.setBackgroundColor(Color.GRAY);
+        tv23.setOnClickListener(this::onClickTV);
+
+        tv24.setTextColor(Color.GRAY);
+        tv24.setBackgroundColor(Color.GRAY);
+        tv24.setOnClickListener(this::onClickTV);
+
+        tv25.setTextColor(Color.GRAY);
+        tv25.setBackgroundColor(Color.GRAY);
+        tv25.setOnClickListener(this::onClickTV);
+
+        tv26.setTextColor(Color.GRAY);
+        tv26.setBackgroundColor(Color.GRAY);
+        tv26.setOnClickListener(this::onClickTV);
+
+        tv27.setTextColor(Color.GRAY);
+        tv27.setBackgroundColor(Color.GRAY);
+        tv27.setOnClickListener(this::onClickTV);
+
+        tv28.setTextColor(Color.GRAY);
+        tv28.setBackgroundColor(Color.GRAY);
+        tv28.setOnClickListener(this::onClickTV);
+
+        tv29.setTextColor(Color.GRAY);
+        tv29.setBackgroundColor(Color.GRAY);
+        tv29.setOnClickListener(this::onClickTV);
+
+        //_______________________________________
+        tv30.setTextColor(Color.GRAY);
+        tv30.setBackgroundColor(Color.GRAY);
+        tv30.setOnClickListener(this::onClickTV);
+
+        tv31.setTextColor(Color.GRAY);
+        tv31.setBackgroundColor(Color.GRAY);
+        tv31.setOnClickListener(this::onClickTV);
+
+        tv32.setTextColor(Color.GRAY);
+        tv32.setBackgroundColor(Color.GRAY);
+        tv32.setOnClickListener(this::onClickTV);
+
+        tv33.setTextColor(Color.GRAY);
+        tv33.setBackgroundColor(Color.GRAY);
+        tv33.setOnClickListener(this::onClickTV);
+
+        tv34.setTextColor(Color.GRAY);
+        tv34.setBackgroundColor(Color.GRAY);
+        tv34.setOnClickListener(this::onClickTV);
+
+        tv35.setTextColor(Color.GRAY);
+        tv35.setBackgroundColor(Color.GRAY);
+        tv35.setOnClickListener(this::onClickTV);
+
+        tv36.setTextColor(Color.GRAY);
+        tv36.setBackgroundColor(Color.GRAY);
+        tv36.setOnClickListener(this::onClickTV);
+
+        tv37.setTextColor(Color.GRAY);
+        tv37.setBackgroundColor(Color.GRAY);
+        tv37.setOnClickListener(this::onClickTV);
+
+        tv38.setTextColor(Color.GRAY);
+        tv38.setBackgroundColor(Color.GRAY);
+        tv38.setOnClickListener(this::onClickTV);
+
+        tv39.setTextColor(Color.GRAY);
+        tv39.setBackgroundColor(Color.GRAY);
+        tv39.setOnClickListener(this::onClickTV);
+
+        //_______________________________________
+        tv40.setTextColor(Color.GRAY);
+        tv40.setBackgroundColor(Color.GRAY);
+        tv40.setOnClickListener(this::onClickTV);
+
+        tv41.setTextColor(Color.GRAY);
+        tv41.setBackgroundColor(Color.GRAY);
+        tv41.setOnClickListener(this::onClickTV);
+
+        tv42.setTextColor(Color.GRAY);
+        tv42.setBackgroundColor(Color.GRAY);
+        tv42.setOnClickListener(this::onClickTV);
+
+        tv43.setTextColor(Color.GRAY);
+        tv43.setBackgroundColor(Color.GRAY);
+        tv43.setOnClickListener(this::onClickTV);
+
+        tv44.setTextColor(Color.GRAY);
+        tv44.setBackgroundColor(Color.GRAY);
+        tv44.setOnClickListener(this::onClickTV);
+
+        tv45.setTextColor(Color.GRAY);
+        tv45.setBackgroundColor(Color.GRAY);
+        tv45.setOnClickListener(this::onClickTV);
+
+        tv46.setTextColor(Color.GRAY);
+        tv46.setBackgroundColor(Color.GRAY);
+        tv46.setOnClickListener(this::onClickTV);
+
+        tv47.setTextColor(Color.GRAY);
+        tv47.setBackgroundColor(Color.GRAY);
+        tv47.setOnClickListener(this::onClickTV);
+
+        tv48.setTextColor(Color.GRAY);
+        tv48.setBackgroundColor(Color.GRAY);
+        tv48.setOnClickListener(this::onClickTV);
+
+        tv49.setTextColor(Color.GRAY);
+        tv49.setBackgroundColor(Color.GRAY);
+        tv49.setOnClickListener(this::onClickTV);
+
+        //_______________________________________
+        tv50.setTextColor(Color.GRAY);
+        tv50.setBackgroundColor(Color.GRAY);
+        tv50.setOnClickListener(this::onClickTV);
+
+        tv51.setTextColor(Color.GRAY);
+        tv51.setBackgroundColor(Color.GRAY);
+        tv51.setOnClickListener(this::onClickTV);
+
+        tv52.setTextColor(Color.GRAY);
+        tv52.setBackgroundColor(Color.GRAY);
+        tv52.setOnClickListener(this::onClickTV);
+
+        tv53.setTextColor(Color.GRAY);
+        tv53.setBackgroundColor(Color.GRAY);
+        tv53.setOnClickListener(this::onClickTV);
+
+        tv54.setTextColor(Color.GRAY);
+        tv54.setBackgroundColor(Color.GRAY);
+        tv54.setOnClickListener(this::onClickTV);
+
+        tv55.setTextColor(Color.GRAY);
+        tv55.setBackgroundColor(Color.GRAY);
+        tv55.setOnClickListener(this::onClickTV);
+
+        tv56.setTextColor(Color.GRAY);
+        tv56.setBackgroundColor(Color.GRAY);
+        tv56.setOnClickListener(this::onClickTV);
+
+        tv57.setTextColor(Color.GRAY);
+        tv57.setBackgroundColor(Color.GRAY);
+        tv57.setOnClickListener(this::onClickTV);
+
+        tv58.setTextColor(Color.GRAY);
+        tv58.setBackgroundColor(Color.GRAY);
+        tv58.setOnClickListener(this::onClickTV);
+
+        tv59.setTextColor(Color.GRAY);
+        tv59.setBackgroundColor(Color.GRAY);
+        tv59.setOnClickListener(this::onClickTV);
+
+        //_______________________________________
+        tv60.setTextColor(Color.GRAY);
+        tv60.setBackgroundColor(Color.GRAY);
+        tv60.setOnClickListener(this::onClickTV);
+
+        tv61.setTextColor(Color.GRAY);
+        tv61.setBackgroundColor(Color.GRAY);
+        tv61.setOnClickListener(this::onClickTV);
+
+        tv62.setTextColor(Color.GRAY);
+        tv62.setBackgroundColor(Color.GRAY);
+        tv62.setOnClickListener(this::onClickTV);
+
+        tv63.setTextColor(Color.GRAY);
+        tv63.setBackgroundColor(Color.GRAY);
+        tv63.setOnClickListener(this::onClickTV);
+
+        tv64.setTextColor(Color.GRAY);
+        tv64.setBackgroundColor(Color.GRAY);
+        tv64.setOnClickListener(this::onClickTV);
+
+        tv65.setTextColor(Color.GRAY);
+        tv65.setBackgroundColor(Color.GRAY);
+        tv65.setOnClickListener(this::onClickTV);
+
+        tv66.setTextColor(Color.GRAY);
+        tv66.setBackgroundColor(Color.GRAY);
+        tv66.setOnClickListener(this::onClickTV);
+
+        tv67.setTextColor(Color.GRAY);
+        tv67.setBackgroundColor(Color.GRAY);
+        tv67.setOnClickListener(this::onClickTV);
+
+        tv68.setTextColor(Color.GRAY);
+        tv68.setBackgroundColor(Color.GRAY);
+        tv68.setOnClickListener(this::onClickTV);
+
+        tv69.setTextColor(Color.GRAY);
+        tv69.setBackgroundColor(Color.GRAY);
+        tv69.setOnClickListener(this::onClickTV);
+
+        //_______________________________________
+        tv70.setTextColor(Color.GRAY);
+        tv70.setBackgroundColor(Color.GRAY);
+        tv70.setOnClickListener(this::onClickTV);
+
+        tv71.setTextColor(Color.GRAY);
+        tv71.setBackgroundColor(Color.GRAY);
+        tv71.setOnClickListener(this::onClickTV);
+
+        tv72.setTextColor(Color.GRAY);
+        tv72.setBackgroundColor(Color.GRAY);
+        tv72.setOnClickListener(this::onClickTV);
+
+        tv73.setTextColor(Color.GRAY);
+        tv73.setBackgroundColor(Color.GRAY);
+        tv73.setOnClickListener(this::onClickTV);
+
+        tv74.setTextColor(Color.GRAY);
+        tv74.setBackgroundColor(Color.GRAY);
+        tv74.setOnClickListener(this::onClickTV);
+
+        tv75.setTextColor(Color.GRAY);
+        tv75.setBackgroundColor(Color.GRAY);
+        tv75.setOnClickListener(this::onClickTV);
+
+        tv76.setTextColor(Color.GRAY);
+        tv76.setBackgroundColor(Color.GRAY);
+        tv76.setOnClickListener(this::onClickTV);
+
+        tv77.setTextColor(Color.GRAY);
+        tv77.setBackgroundColor(Color.GRAY);
+        tv77.setOnClickListener(this::onClickTV);
+
+        tv78.setTextColor(Color.GRAY);
+        tv78.setBackgroundColor(Color.GRAY);
+        tv78.setOnClickListener(this::onClickTV);
+
+        tv79.setTextColor(Color.GRAY);
+        tv79.setBackgroundColor(Color.GRAY);
+        tv79.setOnClickListener(this::onClickTV);
+
+        //_______________________________________
+        tv80.setTextColor(Color.GRAY);
+        tv80.setBackgroundColor(Color.GRAY);
+        tv80.setOnClickListener(this::onClickTV);
+
+        tv81.setTextColor(Color.GRAY);
+        tv81.setBackgroundColor(Color.GRAY);
+        tv81.setOnClickListener(this::onClickTV);
+
+        tv82.setTextColor(Color.GRAY);
+        tv82.setBackgroundColor(Color.GRAY);
+        tv82.setOnClickListener(this::onClickTV);
+
+        tv83.setTextColor(Color.GRAY);
+        tv83.setBackgroundColor(Color.GRAY);
+        tv83.setOnClickListener(this::onClickTV);
+
+        tv84.setTextColor(Color.GRAY);
+        tv84.setBackgroundColor(Color.GRAY);
+        tv84.setOnClickListener(this::onClickTV);
+
+        tv85.setTextColor(Color.GRAY);
+        tv85.setBackgroundColor(Color.GRAY);
+        tv85.setOnClickListener(this::onClickTV);
+
+        tv86.setTextColor(Color.GRAY);
+        tv86.setBackgroundColor(Color.GRAY);
+        tv86.setOnClickListener(this::onClickTV);
+
+        tv87.setTextColor(Color.GRAY);
+        tv87.setBackgroundColor(Color.GRAY);
+        tv87.setOnClickListener(this::onClickTV);
+
+        tv88.setTextColor(Color.GRAY);
+        tv88.setBackgroundColor(Color.GRAY);
+        tv88.setOnClickListener(this::onClickTV);
+
+        tv89.setTextColor(Color.GRAY);
+        tv89.setBackgroundColor(Color.GRAY);
+        tv89.setOnClickListener(this::onClickTV);
+
+        //_______________________________________
+        tv90.setTextColor(Color.GRAY);
+        tv90.setBackgroundColor(Color.GRAY);
+        tv90.setOnClickListener(this::onClickTV);
+
+        tv91.setTextColor(Color.GRAY);
+        tv91.setBackgroundColor(Color.GRAY);
+        tv91.setOnClickListener(this::onClickTV);
+
+        tv92.setTextColor(Color.GRAY);
+        tv92.setBackgroundColor(Color.GRAY);
+        tv92.setOnClickListener(this::onClickTV);
+
+        tv93.setTextColor(Color.GRAY);
+        tv93.setBackgroundColor(Color.GRAY);
+        tv93.setOnClickListener(this::onClickTV);
+
+        tv94.setTextColor(Color.GRAY);
+        tv94.setBackgroundColor(Color.GRAY);
+        tv94.setOnClickListener(this::onClickTV);
+
+        tv95.setTextColor(Color.GRAY);
+        tv95.setBackgroundColor(Color.GRAY);
+        tv95.setOnClickListener(this::onClickTV);
+
+        tv96.setTextColor(Color.GRAY);
+        tv96.setBackgroundColor(Color.GRAY);
+        tv96.setOnClickListener(this::onClickTV);
+
+        tv97.setTextColor(Color.GRAY);
+        tv97.setBackgroundColor(Color.GRAY);
+        tv97.setOnClickListener(this::onClickTV);
+
+        tv98.setTextColor(Color.GRAY);
+        tv98.setBackgroundColor(Color.GRAY);
+        tv98.setOnClickListener(this::onClickTV);
+
+        tv99.setTextColor(Color.GRAY);
+        tv99.setBackgroundColor(Color.GRAY);
+        tv99.setOnClickListener(this::onClickTV);
+
+        //_______________________________________
+        tv100.setTextColor(Color.GRAY);
+        tv100.setBackgroundColor(Color.GRAY);
+        tv100.setOnClickListener(this::onClickTV);
+
+        tv101.setTextColor(Color.GRAY);
+        tv101.setBackgroundColor(Color.GRAY);
+        tv101.setOnClickListener(this::onClickTV);
+
+        tv102.setTextColor(Color.GRAY);
+        tv102.setBackgroundColor(Color.GRAY);
+        tv102.setOnClickListener(this::onClickTV);
+
+        tv103.setTextColor(Color.GRAY);
+        tv103.setBackgroundColor(Color.GRAY);
+        tv103.setOnClickListener(this::onClickTV);
+
+        tv104.setTextColor(Color.GRAY);
+        tv104.setBackgroundColor(Color.GRAY);
+        tv104.setOnClickListener(this::onClickTV);
+
+        tv105.setTextColor(Color.GRAY);
+        tv105.setBackgroundColor(Color.GRAY);
+        tv105.setOnClickListener(this::onClickTV);
+
+        tv106.setTextColor(Color.GRAY);
+        tv106.setBackgroundColor(Color.GRAY);
+        tv106.setOnClickListener(this::onClickTV);
+
+        tv107.setTextColor(Color.GRAY);
+        tv107.setBackgroundColor(Color.GRAY);
+        tv107.setOnClickListener(this::onClickTV);
+
+        tv108.setTextColor(Color.GRAY);
+        tv108.setBackgroundColor(Color.GRAY);
+        tv108.setOnClickListener(this::onClickTV);
+
+        tv109.setTextColor(Color.GRAY);
+        tv109.setBackgroundColor(Color.GRAY);
+        tv109.setOnClickListener(this::onClickTV);
+
+        //_______________________________________
+        tv110.setTextColor(Color.GRAY);
+        tv110.setBackgroundColor(Color.GRAY);
+        tv110.setOnClickListener(this::onClickTV);
+
+        tv111.setTextColor(Color.GRAY);
+        tv111.setBackgroundColor(Color.GRAY);
+        tv111.setOnClickListener(this::onClickTV);
+
+        tv112.setTextColor(Color.GRAY);
+        tv112.setBackgroundColor(Color.GRAY);
+        tv112.setOnClickListener(this::onClickTV);
+
+        tv113.setTextColor(Color.GRAY);
+        tv113.setBackgroundColor(Color.GRAY);
+        tv113.setOnClickListener(this::onClickTV);
+
+        tv114.setTextColor(Color.GRAY);
+        tv114.setBackgroundColor(Color.GRAY);
+        tv114.setOnClickListener(this::onClickTV);
+
+        tv115.setTextColor(Color.GRAY);
+        tv115.setBackgroundColor(Color.GRAY);
+        tv115.setOnClickListener(this::onClickTV);
+
+        tv116.setTextColor(Color.GRAY);
+        tv116.setBackgroundColor(Color.GRAY);
+        tv116.setOnClickListener(this::onClickTV);
+
+        tv117.setTextColor(Color.GRAY);
+        tv117.setBackgroundColor(Color.GRAY);
+        tv117.setOnClickListener(this::onClickTV);
+
+        tv118.setTextColor(Color.GRAY);
+        tv118.setBackgroundColor(Color.GRAY);
+        tv118.setOnClickListener(this::onClickTV);
+
+        tv119.setTextColor(Color.GRAY);
+        tv119.setBackgroundColor(Color.GRAY);
+        tv119.setOnClickListener(this::onClickTV);
+        //__________________________________________
+
         cell_tvs.add(tv00);
         cell_tvs.add(tv01);
+        cell_tvs.add(tv02);
+        cell_tvs.add(tv03);
+        cell_tvs.add(tv04);
+        cell_tvs.add(tv05);
+        cell_tvs.add(tv06);
+        cell_tvs.add(tv07);
+        cell_tvs.add(tv08);
+        cell_tvs.add(tv09);
+
         cell_tvs.add(tv10);
         cell_tvs.add(tv11);
+        cell_tvs.add(tv12);
+        cell_tvs.add(tv13);
+        cell_tvs.add(tv14);
+        cell_tvs.add(tv15);
+        cell_tvs.add(tv16);
+        cell_tvs.add(tv17);
+        cell_tvs.add(tv18);
+        cell_tvs.add(tv19);
+
+        cell_tvs.add(tv20);
+        cell_tvs.add(tv21);
+        cell_tvs.add(tv22);
+        cell_tvs.add(tv23);
+        cell_tvs.add(tv24);
+        cell_tvs.add(tv25);
+        cell_tvs.add(tv26);
+        cell_tvs.add(tv27);
+        cell_tvs.add(tv28);
+        cell_tvs.add(tv29);
+
+        cell_tvs.add(tv30);
+        cell_tvs.add(tv31);
+        cell_tvs.add(tv32);
+        cell_tvs.add(tv33);
+        cell_tvs.add(tv34);
+        cell_tvs.add(tv35);
+        cell_tvs.add(tv36);
+        cell_tvs.add(tv37);
+        cell_tvs.add(tv38);
+        cell_tvs.add(tv39);
+
+        cell_tvs.add(tv40);
+        cell_tvs.add(tv41);
+        cell_tvs.add(tv42);
+        cell_tvs.add(tv43);
+        cell_tvs.add(tv44);
+        cell_tvs.add(tv45);
+        cell_tvs.add(tv46);
+        cell_tvs.add(tv47);
+        cell_tvs.add(tv48);
+        cell_tvs.add(tv49);
+
+        cell_tvs.add(tv50);
+        cell_tvs.add(tv51);
+        cell_tvs.add(tv52);
+        cell_tvs.add(tv53);
+        cell_tvs.add(tv54);
+        cell_tvs.add(tv55);
+        cell_tvs.add(tv56);
+        cell_tvs.add(tv57);
+        cell_tvs.add(tv58);
+        cell_tvs.add(tv59);
+
+        cell_tvs.add(tv60);
+        cell_tvs.add(tv61);
+        cell_tvs.add(tv62);
+        cell_tvs.add(tv63);
+        cell_tvs.add(tv64);
+        cell_tvs.add(tv65);
+        cell_tvs.add(tv66);
+        cell_tvs.add(tv67);
+        cell_tvs.add(tv68);
+        cell_tvs.add(tv69);
+
+        cell_tvs.add(tv70);
+        cell_tvs.add(tv71);
+        cell_tvs.add(tv72);
+        cell_tvs.add(tv73);
+        cell_tvs.add(tv74);
+        cell_tvs.add(tv75);
+        cell_tvs.add(tv76);
+        cell_tvs.add(tv77);
+        cell_tvs.add(tv78);
+        cell_tvs.add(tv79);
+
+        cell_tvs.add(tv80);
+        cell_tvs.add(tv81);
+        cell_tvs.add(tv82);
+        cell_tvs.add(tv83);
+        cell_tvs.add(tv84);
+        cell_tvs.add(tv85);
+        cell_tvs.add(tv86);
+        cell_tvs.add(tv87);
+        cell_tvs.add(tv88);
+        cell_tvs.add(tv89);
+
+        cell_tvs.add(tv90);
+        cell_tvs.add(tv91);
+        cell_tvs.add(tv92);
+        cell_tvs.add(tv93);
+        cell_tvs.add(tv94);
+        cell_tvs.add(tv95);
+        cell_tvs.add(tv96);
+        cell_tvs.add(tv97);
+        cell_tvs.add(tv98);
+        cell_tvs.add(tv99);
+
+        cell_tvs.add(tv100);
+        cell_tvs.add(tv101);
+        cell_tvs.add(tv102);
+        cell_tvs.add(tv103);
+        cell_tvs.add(tv104);
+        cell_tvs.add(tv105);
+        cell_tvs.add(tv106);
+        cell_tvs.add(tv107);
+        cell_tvs.add(tv108);
+        cell_tvs.add(tv109);
+
+        cell_tvs.add(tv110);
+        cell_tvs.add(tv111);
+        cell_tvs.add(tv112);
+        cell_tvs.add(tv113);
+        cell_tvs.add(tv114);
+        cell_tvs.add(tv115);
+        cell_tvs.add(tv116);
+        cell_tvs.add(tv117);
+        cell_tvs.add(tv118);
+        cell_tvs.add(tv119);
+
 
         // Method (2): add four dynamically created cells
-        GridLayout grid = (GridLayout) findViewById(R.id.gridLayout01);
-        for (int i = 2; i<=3; i++) {
-            for (int j=0; j<=1; j++) {
-                TextView tv = new TextView(this);
-                tv.setHeight( dpToPixel(64) );
-                tv.setWidth( dpToPixel(64) );
-                tv.setTextSize( 32 );//dpToPixel(32) );
-                tv.setTextAlignment(TextView.TEXT_ALIGNMENT_CENTER);
-                tv.setTextColor(Color.GRAY);
-                tv.setBackgroundColor(Color.GRAY);
-                tv.setOnClickListener(this::onClickTV);
-
-                GridLayout.LayoutParams lp = new GridLayout.LayoutParams();
-                lp.setMargins(dpToPixel(2), dpToPixel(2), dpToPixel(2), dpToPixel(2));
-                lp.rowSpec = GridLayout.spec(i);
-                lp.columnSpec = GridLayout.spec(j);
-
-                grid.addView(tv, lp);
-
-                cell_tvs.add(tv);
-            }
-        }
-
-        // Method (3): add four dynamically created cells with LayoutInflater
-        LayoutInflater li = LayoutInflater.from(this);
-        for (int i = 4; i<=5; i++) {
-            for (int j=0; j<=1; j++) {
-                TextView tv = (TextView) li.inflate(R.layout.custom_cell_layout, grid, false);
-                //tv.setText(String.valueOf(i)+String.valueOf(j));
-                tv.setTextColor(Color.GRAY);
-                tv.setBackgroundColor(Color.GRAY);
-                tv.setOnClickListener(this::onClickTV);
-
-                GridLayout.LayoutParams lp = (GridLayout.LayoutParams) tv.getLayoutParams();
-                lp.rowSpec = GridLayout.spec(i);
-                lp.columnSpec = GridLayout.spec(j);
-
-                grid.addView(tv, lp);
-
-                cell_tvs.add(tv);
-            }
-        }
+//        GridLayout grid = (GridLayout) findViewById(R.id.gridLayout01);
+//        for (int i = 2; i<=3; i++) {
+//            for (int j=0; j<=1; j++) {
+//                TextView tv = new TextView(this);
+//                tv.setHeight( dpToPixel(28) );
+//                tv.setWidth( dpToPixel(28) );
+//                tv.setTextSize( 20 );//dpToPixel(32) );
+//                tv.setTextAlignment(TextView.TEXT_ALIGNMENT_CENTER);
+//                tv.setTextColor(Color.GRAY);
+//                tv.setBackgroundColor(Color.GRAY);
+//                tv.setOnClickListener(this::onClickTV);
+//
+//                GridLayout.LayoutParams lp = new GridLayout.LayoutParams();
+//                lp.setMargins(dpToPixel(2), dpToPixel(2), dpToPixel(2), dpToPixel(2));
+//                lp.rowSpec = GridLayout.spec(i);
+//                lp.columnSpec = GridLayout.spec(j);
+//
+//                grid.addView(tv, lp);
+//
+//                cell_tvs.add(tv);
+//            }
+//        }
+//
+//        // Method (3): add four dynamically created cells with LayoutInflater
+//        LayoutInflater li = LayoutInflater.from(this);
+//        for (int i = 4; i<=5; i++) {
+//            for (int j=0; j<=1; j++) {
+//                TextView tv = (TextView) li.inflate(R.layout.custom_cell_layout, grid, false);
+//                //tv.setText(String.valueOf(i)+String.valueOf(j));
+//                tv.setTextColor(Color.GRAY);
+//                tv.setBackgroundColor(Color.GRAY);
+//                tv.setOnClickListener(this::onClickTV);
+//
+//                GridLayout.LayoutParams lp = (GridLayout.LayoutParams) tv.getLayoutParams();
+//                lp.rowSpec = GridLayout.spec(i);
+//                lp.columnSpec = GridLayout.spec(j);
+//
+//                grid.addView(tv, lp);
+//
+//                cell_tvs.add(tv);
+//            }
+//        }
 
     }
 
