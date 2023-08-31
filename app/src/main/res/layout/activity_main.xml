@@ -22,6 +22,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:rowCount="12">
 
+<!--        <TextView-->
+<!--            android:id="@+id/textViewClock"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:width="28dp"-->
+<!--            android:height="28dp"-->
+<!--            android:text="@string/clock"-->
+
+<!--        />-->
 
         <TextView
             android:id="@+id/textView00"
@@ -33,7 +42,7 @@
             android:layout_marginBottom="2dp"
             android:width="28dp"
             android:height="28dp"
-            android:text="@string/flag"
+            android:text=""
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_column="0"
@@ -49,7 +58,7 @@
             android:layout_marginBottom="2dp"
             android:width="28dp"
             android:height="28dp"
-            android:text="@string/mine"
+            android:text=""
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_column="1"
@@ -65,7 +74,7 @@
             android:layout_marginBottom="2dp"
             android:width="28dp"
             android:height="28dp"
-            android:text="10"
+            android:text=""
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_column="0"
@@ -81,7 +90,7 @@
             android:layout_marginBottom="2dp"
             android:width="28dp"
             android:height="28dp"
-            android:text="11"
+            android:text=""
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_column="1"
@@ -97,7 +106,7 @@
             android:layout_marginBottom="2dp"
             android:width="28dp"
             android:height="28dp"
-            android:text="02"
+            android:text=""
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_column="2"
@@ -113,7 +122,7 @@
             android:layout_marginBottom="2dp"
             android:width="28dp"
             android:height="28dp"
-            android:text="03"
+            android:text=""
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_column="3"
@@ -130,7 +139,7 @@
             android:layout_marginBottom="2dp"
             android:width="28dp"
             android:height="28dp"
-            android:text="04"
+            android:text=""
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_column="4"
@@ -371,7 +380,7 @@
             android:layout_marginBottom="2dp"
             android:width="28dp"
             android:height="28dp"
-            android:text="21"
+            android:text=""
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_column="1"

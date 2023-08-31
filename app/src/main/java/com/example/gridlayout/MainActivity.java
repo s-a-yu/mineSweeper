@@ -9,12 +9,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import java.util.Random;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int COLUMN_COUNT = 2;
+    private static final int COLUMN_COUNT = 10;
 
     // save the TextViews of all cells in an array, so later on,
     // when a TextView is clicked, we know which cell it is
@@ -166,492 +167,492 @@ public class MainActivity extends AppCompatActivity {
         TextView tv119 = (TextView) findViewById(R.id.textView119);
         //_______________________________________
         tv00.setTextColor(Color.GRAY);
-        tv00.setBackgroundColor(Color.GRAY);
+        tv00.setBackgroundColor(Color.GREEN);
         tv00.setOnClickListener(this::onClickTV);
 
         tv01.setTextColor(Color.GRAY);
-        tv01.setBackgroundColor(Color.GRAY);
+        tv01.setBackgroundColor(Color.GREEN);
         tv01.setOnClickListener(this::onClickTV);
 
         tv02.setTextColor(Color.GRAY);
-        tv02.setBackgroundColor(Color.GRAY);
+        tv02.setBackgroundColor(Color.GREEN);
         tv02.setOnClickListener(this::onClickTV);
 
         tv03.setTextColor(Color.GRAY);
-        tv03.setBackgroundColor(Color.GRAY);
+        tv03.setBackgroundColor(Color.GREEN);
         tv03.setOnClickListener(this::onClickTV);
 
         tv04.setTextColor(Color.GRAY);
-        tv04.setBackgroundColor(Color.GRAY);
+        tv04.setBackgroundColor(Color.GREEN);
         tv04.setOnClickListener(this::onClickTV);
 
         tv05.setTextColor(Color.GRAY);
-        tv05.setBackgroundColor(Color.GRAY);
+        tv05.setBackgroundColor(Color.GREEN);
         tv05.setOnClickListener(this::onClickTV);
 
         tv06.setTextColor(Color.GRAY);
-        tv06.setBackgroundColor(Color.GRAY);
+        tv06.setBackgroundColor(Color.GREEN);
         tv06.setOnClickListener(this::onClickTV);
 
         tv07.setTextColor(Color.GRAY);
-        tv07.setBackgroundColor(Color.GRAY);
+        tv07.setBackgroundColor(Color.GREEN);
         tv07.setOnClickListener(this::onClickTV);
 
         tv08.setTextColor(Color.GRAY);
-        tv08.setBackgroundColor(Color.GRAY);
+        tv08.setBackgroundColor(Color.GREEN);
         tv08.setOnClickListener(this::onClickTV);
 
         tv09.setTextColor(Color.GRAY);
-        tv09.setBackgroundColor(Color.GRAY);
+        tv09.setBackgroundColor(Color.GREEN);
         tv09.setOnClickListener(this::onClickTV);
         //_______________________________________
         tv10.setTextColor(Color.GRAY);
-        tv10.setBackgroundColor(Color.GRAY);
+        tv10.setBackgroundColor(Color.GREEN);
         tv10.setOnClickListener(this::onClickTV);
 
         tv11.setTextColor(Color.GRAY);
-        tv11.setBackgroundColor(Color.GRAY);
+        tv11.setBackgroundColor(Color.GREEN);
         tv11.setOnClickListener(this::onClickTV);
 
         tv12.setTextColor(Color.GRAY);
-        tv12.setBackgroundColor(Color.GRAY);
+        tv12.setBackgroundColor(Color.GREEN);
         tv12.setOnClickListener(this::onClickTV);
 
         tv13.setTextColor(Color.GRAY);
-        tv13.setBackgroundColor(Color.GRAY);
+        tv13.setBackgroundColor(Color.GREEN);
         tv13.setOnClickListener(this::onClickTV);
 
         tv14.setTextColor(Color.GRAY);
-        tv14.setBackgroundColor(Color.GRAY);
+        tv14.setBackgroundColor(Color.GREEN);
         tv14.setOnClickListener(this::onClickTV);
 
         tv15.setTextColor(Color.GRAY);
-        tv15.setBackgroundColor(Color.GRAY);
+        tv15.setBackgroundColor(Color.GREEN);
         tv15.setOnClickListener(this::onClickTV);
 
         tv16.setTextColor(Color.GRAY);
-        tv16.setBackgroundColor(Color.GRAY);
+        tv16.setBackgroundColor(Color.GREEN);
         tv16.setOnClickListener(this::onClickTV);
 
         tv17.setTextColor(Color.GRAY);
-        tv17.setBackgroundColor(Color.GRAY);
+        tv17.setBackgroundColor(Color.GREEN);
         tv17.setOnClickListener(this::onClickTV);
 
         tv18.setTextColor(Color.GRAY);
-        tv18.setBackgroundColor(Color.GRAY);
+        tv18.setBackgroundColor(Color.GREEN);
         tv18.setOnClickListener(this::onClickTV);
 
         tv19.setTextColor(Color.GRAY);
-        tv19.setBackgroundColor(Color.GRAY);
+        tv19.setBackgroundColor(Color.GREEN);
         tv19.setOnClickListener(this::onClickTV);
         //_______________________________________
         tv20.setTextColor(Color.GRAY);
-        tv20.setBackgroundColor(Color.GRAY);
+        tv20.setBackgroundColor(Color.GREEN);
         tv20.setOnClickListener(this::onClickTV);
 
         tv21.setTextColor(Color.GRAY);
-        tv21.setBackgroundColor(Color.GRAY);
+        tv21.setBackgroundColor(Color.GREEN);
         tv21.setOnClickListener(this::onClickTV);
 
         tv22.setTextColor(Color.GRAY);
-        tv22.setBackgroundColor(Color.GRAY);
+        tv22.setBackgroundColor(Color.GREEN);
         tv22.setOnClickListener(this::onClickTV);
 
         tv23.setTextColor(Color.GRAY);
-        tv23.setBackgroundColor(Color.GRAY);
+        tv23.setBackgroundColor(Color.GREEN);
         tv23.setOnClickListener(this::onClickTV);
 
         tv24.setTextColor(Color.GRAY);
-        tv24.setBackgroundColor(Color.GRAY);
+        tv24.setBackgroundColor(Color.GREEN);
         tv24.setOnClickListener(this::onClickTV);
 
         tv25.setTextColor(Color.GRAY);
-        tv25.setBackgroundColor(Color.GRAY);
+        tv25.setBackgroundColor(Color.GREEN);
         tv25.setOnClickListener(this::onClickTV);
 
         tv26.setTextColor(Color.GRAY);
-        tv26.setBackgroundColor(Color.GRAY);
+        tv26.setBackgroundColor(Color.GREEN);
         tv26.setOnClickListener(this::onClickTV);
 
         tv27.setTextColor(Color.GRAY);
-        tv27.setBackgroundColor(Color.GRAY);
+        tv27.setBackgroundColor(Color.GREEN);
         tv27.setOnClickListener(this::onClickTV);
 
         tv28.setTextColor(Color.GRAY);
-        tv28.setBackgroundColor(Color.GRAY);
+        tv28.setBackgroundColor(Color.GREEN);
         tv28.setOnClickListener(this::onClickTV);
 
         tv29.setTextColor(Color.GRAY);
-        tv29.setBackgroundColor(Color.GRAY);
+        tv29.setBackgroundColor(Color.GREEN);
         tv29.setOnClickListener(this::onClickTV);
 
         //_______________________________________
         tv30.setTextColor(Color.GRAY);
-        tv30.setBackgroundColor(Color.GRAY);
+        tv30.setBackgroundColor(Color.GREEN);
         tv30.setOnClickListener(this::onClickTV);
 
         tv31.setTextColor(Color.GRAY);
-        tv31.setBackgroundColor(Color.GRAY);
+        tv31.setBackgroundColor(Color.GREEN);
         tv31.setOnClickListener(this::onClickTV);
 
         tv32.setTextColor(Color.GRAY);
-        tv32.setBackgroundColor(Color.GRAY);
+        tv32.setBackgroundColor(Color.GREEN);
         tv32.setOnClickListener(this::onClickTV);
 
         tv33.setTextColor(Color.GRAY);
-        tv33.setBackgroundColor(Color.GRAY);
+        tv33.setBackgroundColor(Color.GREEN);
         tv33.setOnClickListener(this::onClickTV);
 
         tv34.setTextColor(Color.GRAY);
-        tv34.setBackgroundColor(Color.GRAY);
+        tv34.setBackgroundColor(Color.GREEN);
         tv34.setOnClickListener(this::onClickTV);
 
         tv35.setTextColor(Color.GRAY);
-        tv35.setBackgroundColor(Color.GRAY);
+        tv35.setBackgroundColor(Color.GREEN);
         tv35.setOnClickListener(this::onClickTV);
 
         tv36.setTextColor(Color.GRAY);
-        tv36.setBackgroundColor(Color.GRAY);
+        tv36.setBackgroundColor(Color.GREEN);
         tv36.setOnClickListener(this::onClickTV);
 
         tv37.setTextColor(Color.GRAY);
-        tv37.setBackgroundColor(Color.GRAY);
+        tv37.setBackgroundColor(Color.GREEN);
         tv37.setOnClickListener(this::onClickTV);
 
         tv38.setTextColor(Color.GRAY);
-        tv38.setBackgroundColor(Color.GRAY);
+        tv38.setBackgroundColor(Color.GREEN);
         tv38.setOnClickListener(this::onClickTV);
 
         tv39.setTextColor(Color.GRAY);
-        tv39.setBackgroundColor(Color.GRAY);
+        tv39.setBackgroundColor(Color.GREEN);
         tv39.setOnClickListener(this::onClickTV);
 
         //_______________________________________
         tv40.setTextColor(Color.GRAY);
-        tv40.setBackgroundColor(Color.GRAY);
+        tv40.setBackgroundColor(Color.GREEN);
         tv40.setOnClickListener(this::onClickTV);
 
         tv41.setTextColor(Color.GRAY);
-        tv41.setBackgroundColor(Color.GRAY);
+        tv41.setBackgroundColor(Color.GREEN);
         tv41.setOnClickListener(this::onClickTV);
 
         tv42.setTextColor(Color.GRAY);
-        tv42.setBackgroundColor(Color.GRAY);
+        tv42.setBackgroundColor(Color.GREEN);
         tv42.setOnClickListener(this::onClickTV);
 
         tv43.setTextColor(Color.GRAY);
-        tv43.setBackgroundColor(Color.GRAY);
+        tv43.setBackgroundColor(Color.GREEN);
         tv43.setOnClickListener(this::onClickTV);
 
         tv44.setTextColor(Color.GRAY);
-        tv44.setBackgroundColor(Color.GRAY);
+        tv44.setBackgroundColor(Color.GREEN);
         tv44.setOnClickListener(this::onClickTV);
 
         tv45.setTextColor(Color.GRAY);
-        tv45.setBackgroundColor(Color.GRAY);
+        tv45.setBackgroundColor(Color.GREEN);
         tv45.setOnClickListener(this::onClickTV);
 
         tv46.setTextColor(Color.GRAY);
-        tv46.setBackgroundColor(Color.GRAY);
+        tv46.setBackgroundColor(Color.GREEN);
         tv46.setOnClickListener(this::onClickTV);
 
         tv47.setTextColor(Color.GRAY);
-        tv47.setBackgroundColor(Color.GRAY);
+        tv47.setBackgroundColor(Color.GREEN);
         tv47.setOnClickListener(this::onClickTV);
 
         tv48.setTextColor(Color.GRAY);
-        tv48.setBackgroundColor(Color.GRAY);
+        tv48.setBackgroundColor(Color.GREEN);
         tv48.setOnClickListener(this::onClickTV);
 
         tv49.setTextColor(Color.GRAY);
-        tv49.setBackgroundColor(Color.GRAY);
+        tv49.setBackgroundColor(Color.GREEN);
         tv49.setOnClickListener(this::onClickTV);
 
         //_______________________________________
         tv50.setTextColor(Color.GRAY);
-        tv50.setBackgroundColor(Color.GRAY);
+        tv50.setBackgroundColor(Color.GREEN);
         tv50.setOnClickListener(this::onClickTV);
 
         tv51.setTextColor(Color.GRAY);
-        tv51.setBackgroundColor(Color.GRAY);
+        tv51.setBackgroundColor(Color.GREEN);
         tv51.setOnClickListener(this::onClickTV);
 
         tv52.setTextColor(Color.GRAY);
-        tv52.setBackgroundColor(Color.GRAY);
+        tv52.setBackgroundColor(Color.GREEN);
         tv52.setOnClickListener(this::onClickTV);
 
         tv53.setTextColor(Color.GRAY);
-        tv53.setBackgroundColor(Color.GRAY);
+        tv53.setBackgroundColor(Color.GREEN);
         tv53.setOnClickListener(this::onClickTV);
 
         tv54.setTextColor(Color.GRAY);
-        tv54.setBackgroundColor(Color.GRAY);
+        tv54.setBackgroundColor(Color.GREEN);
         tv54.setOnClickListener(this::onClickTV);
 
         tv55.setTextColor(Color.GRAY);
-        tv55.setBackgroundColor(Color.GRAY);
+        tv55.setBackgroundColor(Color.GREEN);
         tv55.setOnClickListener(this::onClickTV);
 
         tv56.setTextColor(Color.GRAY);
-        tv56.setBackgroundColor(Color.GRAY);
+        tv56.setBackgroundColor(Color.GREEN);
         tv56.setOnClickListener(this::onClickTV);
 
         tv57.setTextColor(Color.GRAY);
-        tv57.setBackgroundColor(Color.GRAY);
+        tv57.setBackgroundColor(Color.GREEN);
         tv57.setOnClickListener(this::onClickTV);
 
         tv58.setTextColor(Color.GRAY);
-        tv58.setBackgroundColor(Color.GRAY);
+        tv58.setBackgroundColor(Color.GREEN);
         tv58.setOnClickListener(this::onClickTV);
 
         tv59.setTextColor(Color.GRAY);
-        tv59.setBackgroundColor(Color.GRAY);
+        tv59.setBackgroundColor(Color.GREEN);
         tv59.setOnClickListener(this::onClickTV);
 
         //_______________________________________
         tv60.setTextColor(Color.GRAY);
-        tv60.setBackgroundColor(Color.GRAY);
+        tv60.setBackgroundColor(Color.GREEN);
         tv60.setOnClickListener(this::onClickTV);
 
         tv61.setTextColor(Color.GRAY);
-        tv61.setBackgroundColor(Color.GRAY);
+        tv61.setBackgroundColor(Color.GREEN);
         tv61.setOnClickListener(this::onClickTV);
 
         tv62.setTextColor(Color.GRAY);
-        tv62.setBackgroundColor(Color.GRAY);
+        tv62.setBackgroundColor(Color.GREEN);
         tv62.setOnClickListener(this::onClickTV);
 
         tv63.setTextColor(Color.GRAY);
-        tv63.setBackgroundColor(Color.GRAY);
+        tv63.setBackgroundColor(Color.GREEN);
         tv63.setOnClickListener(this::onClickTV);
 
         tv64.setTextColor(Color.GRAY);
-        tv64.setBackgroundColor(Color.GRAY);
+        tv64.setBackgroundColor(Color.GREEN);
         tv64.setOnClickListener(this::onClickTV);
 
         tv65.setTextColor(Color.GRAY);
-        tv65.setBackgroundColor(Color.GRAY);
+        tv65.setBackgroundColor(Color.GREEN);
         tv65.setOnClickListener(this::onClickTV);
 
         tv66.setTextColor(Color.GRAY);
-        tv66.setBackgroundColor(Color.GRAY);
+        tv66.setBackgroundColor(Color.GREEN);
         tv66.setOnClickListener(this::onClickTV);
 
         tv67.setTextColor(Color.GRAY);
-        tv67.setBackgroundColor(Color.GRAY);
+        tv67.setBackgroundColor(Color.GREEN);
         tv67.setOnClickListener(this::onClickTV);
 
         tv68.setTextColor(Color.GRAY);
-        tv68.setBackgroundColor(Color.GRAY);
+        tv68.setBackgroundColor(Color.GREEN);
         tv68.setOnClickListener(this::onClickTV);
 
         tv69.setTextColor(Color.GRAY);
-        tv69.setBackgroundColor(Color.GRAY);
+        tv69.setBackgroundColor(Color.GREEN);
         tv69.setOnClickListener(this::onClickTV);
 
         //_______________________________________
         tv70.setTextColor(Color.GRAY);
-        tv70.setBackgroundColor(Color.GRAY);
+        tv70.setBackgroundColor(Color.GREEN);
         tv70.setOnClickListener(this::onClickTV);
 
         tv71.setTextColor(Color.GRAY);
-        tv71.setBackgroundColor(Color.GRAY);
+        tv71.setBackgroundColor(Color.GREEN);
         tv71.setOnClickListener(this::onClickTV);
 
         tv72.setTextColor(Color.GRAY);
-        tv72.setBackgroundColor(Color.GRAY);
+        tv72.setBackgroundColor(Color.GREEN);
         tv72.setOnClickListener(this::onClickTV);
 
         tv73.setTextColor(Color.GRAY);
-        tv73.setBackgroundColor(Color.GRAY);
+        tv73.setBackgroundColor(Color.GREEN);
         tv73.setOnClickListener(this::onClickTV);
 
         tv74.setTextColor(Color.GRAY);
-        tv74.setBackgroundColor(Color.GRAY);
+        tv74.setBackgroundColor(Color.GREEN);
         tv74.setOnClickListener(this::onClickTV);
 
         tv75.setTextColor(Color.GRAY);
-        tv75.setBackgroundColor(Color.GRAY);
+        tv75.setBackgroundColor(Color.GREEN);
         tv75.setOnClickListener(this::onClickTV);
 
         tv76.setTextColor(Color.GRAY);
-        tv76.setBackgroundColor(Color.GRAY);
+        tv76.setBackgroundColor(Color.GREEN);
         tv76.setOnClickListener(this::onClickTV);
 
         tv77.setTextColor(Color.GRAY);
-        tv77.setBackgroundColor(Color.GRAY);
+        tv77.setBackgroundColor(Color.GREEN);
         tv77.setOnClickListener(this::onClickTV);
 
         tv78.setTextColor(Color.GRAY);
-        tv78.setBackgroundColor(Color.GRAY);
+        tv78.setBackgroundColor(Color.GREEN);
         tv78.setOnClickListener(this::onClickTV);
 
         tv79.setTextColor(Color.GRAY);
-        tv79.setBackgroundColor(Color.GRAY);
+        tv79.setBackgroundColor(Color.GREEN);
         tv79.setOnClickListener(this::onClickTV);
 
         //_______________________________________
         tv80.setTextColor(Color.GRAY);
-        tv80.setBackgroundColor(Color.GRAY);
+        tv80.setBackgroundColor(Color.GREEN);
         tv80.setOnClickListener(this::onClickTV);
 
         tv81.setTextColor(Color.GRAY);
-        tv81.setBackgroundColor(Color.GRAY);
+        tv81.setBackgroundColor(Color.GREEN);
         tv81.setOnClickListener(this::onClickTV);
 
         tv82.setTextColor(Color.GRAY);
-        tv82.setBackgroundColor(Color.GRAY);
+        tv82.setBackgroundColor(Color.GREEN);
         tv82.setOnClickListener(this::onClickTV);
 
         tv83.setTextColor(Color.GRAY);
-        tv83.setBackgroundColor(Color.GRAY);
+        tv83.setBackgroundColor(Color.GREEN);
         tv83.setOnClickListener(this::onClickTV);
 
         tv84.setTextColor(Color.GRAY);
-        tv84.setBackgroundColor(Color.GRAY);
+        tv84.setBackgroundColor(Color.GREEN);
         tv84.setOnClickListener(this::onClickTV);
 
         tv85.setTextColor(Color.GRAY);
-        tv85.setBackgroundColor(Color.GRAY);
+        tv85.setBackgroundColor(Color.GREEN);
         tv85.setOnClickListener(this::onClickTV);
 
         tv86.setTextColor(Color.GRAY);
-        tv86.setBackgroundColor(Color.GRAY);
+        tv86.setBackgroundColor(Color.GREEN);
         tv86.setOnClickListener(this::onClickTV);
 
         tv87.setTextColor(Color.GRAY);
-        tv87.setBackgroundColor(Color.GRAY);
+        tv87.setBackgroundColor(Color.GREEN);
         tv87.setOnClickListener(this::onClickTV);
 
         tv88.setTextColor(Color.GRAY);
-        tv88.setBackgroundColor(Color.GRAY);
+        tv88.setBackgroundColor(Color.GREEN);
         tv88.setOnClickListener(this::onClickTV);
 
         tv89.setTextColor(Color.GRAY);
-        tv89.setBackgroundColor(Color.GRAY);
+        tv89.setBackgroundColor(Color.GREEN);
         tv89.setOnClickListener(this::onClickTV);
 
         //_______________________________________
         tv90.setTextColor(Color.GRAY);
-        tv90.setBackgroundColor(Color.GRAY);
+        tv90.setBackgroundColor(Color.GREEN);
         tv90.setOnClickListener(this::onClickTV);
 
         tv91.setTextColor(Color.GRAY);
-        tv91.setBackgroundColor(Color.GRAY);
+        tv91.setBackgroundColor(Color.GREEN);
         tv91.setOnClickListener(this::onClickTV);
 
         tv92.setTextColor(Color.GRAY);
-        tv92.setBackgroundColor(Color.GRAY);
+        tv92.setBackgroundColor(Color.GREEN);
         tv92.setOnClickListener(this::onClickTV);
 
         tv93.setTextColor(Color.GRAY);
-        tv93.setBackgroundColor(Color.GRAY);
+        tv93.setBackgroundColor(Color.GREEN);
         tv93.setOnClickListener(this::onClickTV);
 
         tv94.setTextColor(Color.GRAY);
-        tv94.setBackgroundColor(Color.GRAY);
+        tv94.setBackgroundColor(Color.GREEN);
         tv94.setOnClickListener(this::onClickTV);
 
         tv95.setTextColor(Color.GRAY);
-        tv95.setBackgroundColor(Color.GRAY);
+        tv95.setBackgroundColor(Color.GREEN);
         tv95.setOnClickListener(this::onClickTV);
 
         tv96.setTextColor(Color.GRAY);
-        tv96.setBackgroundColor(Color.GRAY);
+        tv96.setBackgroundColor(Color.GREEN);
         tv96.setOnClickListener(this::onClickTV);
 
         tv97.setTextColor(Color.GRAY);
-        tv97.setBackgroundColor(Color.GRAY);
+        tv97.setBackgroundColor(Color.GREEN);
         tv97.setOnClickListener(this::onClickTV);
 
         tv98.setTextColor(Color.GRAY);
-        tv98.setBackgroundColor(Color.GRAY);
+        tv98.setBackgroundColor(Color.GREEN);
         tv98.setOnClickListener(this::onClickTV);
 
         tv99.setTextColor(Color.GRAY);
-        tv99.setBackgroundColor(Color.GRAY);
+        tv99.setBackgroundColor(Color.GREEN);
         tv99.setOnClickListener(this::onClickTV);
 
         //_______________________________________
         tv100.setTextColor(Color.GRAY);
-        tv100.setBackgroundColor(Color.GRAY);
+        tv100.setBackgroundColor(Color.GREEN);
         tv100.setOnClickListener(this::onClickTV);
 
         tv101.setTextColor(Color.GRAY);
-        tv101.setBackgroundColor(Color.GRAY);
+        tv101.setBackgroundColor(Color.GREEN);
         tv101.setOnClickListener(this::onClickTV);
 
         tv102.setTextColor(Color.GRAY);
-        tv102.setBackgroundColor(Color.GRAY);
+        tv102.setBackgroundColor(Color.GREEN);
         tv102.setOnClickListener(this::onClickTV);
 
         tv103.setTextColor(Color.GRAY);
-        tv103.setBackgroundColor(Color.GRAY);
+        tv103.setBackgroundColor(Color.GREEN);
         tv103.setOnClickListener(this::onClickTV);
 
         tv104.setTextColor(Color.GRAY);
-        tv104.setBackgroundColor(Color.GRAY);
+        tv104.setBackgroundColor(Color.GREEN);
         tv104.setOnClickListener(this::onClickTV);
 
         tv105.setTextColor(Color.GRAY);
-        tv105.setBackgroundColor(Color.GRAY);
+        tv105.setBackgroundColor(Color.GREEN);
         tv105.setOnClickListener(this::onClickTV);
 
         tv106.setTextColor(Color.GRAY);
-        tv106.setBackgroundColor(Color.GRAY);
+        tv106.setBackgroundColor(Color.GREEN);
         tv106.setOnClickListener(this::onClickTV);
 
         tv107.setTextColor(Color.GRAY);
-        tv107.setBackgroundColor(Color.GRAY);
+        tv107.setBackgroundColor(Color.GREEN);
         tv107.setOnClickListener(this::onClickTV);
 
         tv108.setTextColor(Color.GRAY);
-        tv108.setBackgroundColor(Color.GRAY);
+        tv108.setBackgroundColor(Color.GREEN);
         tv108.setOnClickListener(this::onClickTV);
 
         tv109.setTextColor(Color.GRAY);
-        tv109.setBackgroundColor(Color.GRAY);
+        tv109.setBackgroundColor(Color.GREEN);
         tv109.setOnClickListener(this::onClickTV);
 
         //_______________________________________
         tv110.setTextColor(Color.GRAY);
-        tv110.setBackgroundColor(Color.GRAY);
+        tv110.setBackgroundColor(Color.GREEN);
         tv110.setOnClickListener(this::onClickTV);
 
         tv111.setTextColor(Color.GRAY);
-        tv111.setBackgroundColor(Color.GRAY);
+        tv111.setBackgroundColor(Color.GREEN);
         tv111.setOnClickListener(this::onClickTV);
 
         tv112.setTextColor(Color.GRAY);
-        tv112.setBackgroundColor(Color.GRAY);
+        tv112.setBackgroundColor(Color.GREEN);
         tv112.setOnClickListener(this::onClickTV);
 
         tv113.setTextColor(Color.GRAY);
-        tv113.setBackgroundColor(Color.GRAY);
+        tv113.setBackgroundColor(Color.GREEN);
         tv113.setOnClickListener(this::onClickTV);
 
         tv114.setTextColor(Color.GRAY);
-        tv114.setBackgroundColor(Color.GRAY);
+        tv114.setBackgroundColor(Color.GREEN);
         tv114.setOnClickListener(this::onClickTV);
 
         tv115.setTextColor(Color.GRAY);
-        tv115.setBackgroundColor(Color.GRAY);
+        tv115.setBackgroundColor(Color.GREEN);
         tv115.setOnClickListener(this::onClickTV);
 
         tv116.setTextColor(Color.GRAY);
-        tv116.setBackgroundColor(Color.GRAY);
+        tv116.setBackgroundColor(Color.GREEN);
         tv116.setOnClickListener(this::onClickTV);
 
         tv117.setTextColor(Color.GRAY);
-        tv117.setBackgroundColor(Color.GRAY);
+        tv117.setBackgroundColor(Color.GREEN);
         tv117.setOnClickListener(this::onClickTV);
 
         tv118.setTextColor(Color.GRAY);
-        tv118.setBackgroundColor(Color.GRAY);
+        tv118.setBackgroundColor(Color.GREEN);
         tv118.setOnClickListener(this::onClickTV);
 
         tv119.setTextColor(Color.GRAY);
-        tv119.setBackgroundColor(Color.GRAY);
+        tv119.setBackgroundColor(Color.GREEN);
         tv119.setOnClickListener(this::onClickTV);
         //__________________________________________
 
@@ -787,50 +788,11 @@ public class MainActivity extends AppCompatActivity {
         cell_tvs.add(tv118);
         cell_tvs.add(tv119);
 
-
-        // Method (2): add four dynamically created cells
-//        GridLayout grid = (GridLayout) findViewById(R.id.gridLayout01);
-//        for (int i = 2; i<=3; i++) {
-//            for (int j=0; j<=1; j++) {
-//                TextView tv = new TextView(this);
-//                tv.setHeight( dpToPixel(28) );
-//                tv.setWidth( dpToPixel(28) );
-//                tv.setTextSize( 20 );//dpToPixel(32) );
-//                tv.setTextAlignment(TextView.TEXT_ALIGNMENT_CENTER);
-//                tv.setTextColor(Color.GRAY);
-//                tv.setBackgroundColor(Color.GRAY);
-//                tv.setOnClickListener(this::onClickTV);
-//
-//                GridLayout.LayoutParams lp = new GridLayout.LayoutParams();
-//                lp.setMargins(dpToPixel(2), dpToPixel(2), dpToPixel(2), dpToPixel(2));
-//                lp.rowSpec = GridLayout.spec(i);
-//                lp.columnSpec = GridLayout.spec(j);
-//
-//                grid.addView(tv, lp);
-//
-//                cell_tvs.add(tv);
-//            }
-//        }
-//
-//        // Method (3): add four dynamically created cells with LayoutInflater
-//        LayoutInflater li = LayoutInflater.from(this);
-//        for (int i = 4; i<=5; i++) {
-//            for (int j=0; j<=1; j++) {
-//                TextView tv = (TextView) li.inflate(R.layout.custom_cell_layout, grid, false);
-//                //tv.setText(String.valueOf(i)+String.valueOf(j));
-//                tv.setTextColor(Color.GRAY);
-//                tv.setBackgroundColor(Color.GRAY);
-//                tv.setOnClickListener(this::onClickTV);
-//
-//                GridLayout.LayoutParams lp = (GridLayout.LayoutParams) tv.getLayoutParams();
-//                lp.rowSpec = GridLayout.spec(i);
-//                lp.columnSpec = GridLayout.spec(j);
-//
-//                grid.addView(tv, lp);
-//
-//                cell_tvs.add(tv);
-//            }
-//        }
+        //________________________________
+        //place 4 mines
+        for(int i=0; i<4; i++){
+            placeMine();
+        }
 
     }
 
@@ -847,13 +809,21 @@ public class MainActivity extends AppCompatActivity {
         int n = findIndexOfCellTextView(tv);
         int i = n/COLUMN_COUNT;
         int j = n%COLUMN_COUNT;
-        tv.setText(String.valueOf(i)+String.valueOf(j));
-        if (tv.getCurrentTextColor() == Color.GRAY) {
-            tv.setTextColor(Color.GREEN);
-            tv.setBackgroundColor(Color.parseColor("lime"));
-        }else {
-            tv.setTextColor(Color.GRAY);
-            tv.setBackgroundColor(Color.LTGRAY);
+
+        if(tv.getText() != "@string/mine"){
+            tv.setText(String.valueOf(i)+String.valueOf(j));
         }
+
+        if (tv.getCurrentTextColor() == Color.GRAY) {
+            tv.setBackgroundColor(Color.parseColor("white"));
+        }
+    }
+
+    public void placeMine(){
+        Random rand = new Random();
+        int randomNum = rand.nextInt((119 - 0) + 1);
+
+        cell_tvs.get(randomNum).setText("@string/mine");
+        //cell_tvs.get(randomNum).setTextColor(Color.GREEN);
     }
 }
