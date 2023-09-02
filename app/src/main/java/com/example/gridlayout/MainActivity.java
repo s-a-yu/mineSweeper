@@ -1,12 +1,10 @@
 package com.example.gridlayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.gridlayout.widget.GridLayout;
 
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 import java.util.Random;
@@ -20,6 +18,12 @@ public class MainActivity extends AppCompatActivity {
     // save the TextViews of all cells in an array, so later on,
     // when a TextView is clicked, we know which cell it is
     private ArrayList<TextView> cell_tvs;
+    boolean visited[];
+
+    {
+        visited = new boolean[120];
+
+    }
 
     private int dpToPixel(int dp) {
         float density = Resources.getSystem().getDisplayMetrics().density;
@@ -804,19 +808,90 @@ public class MainActivity extends AppCompatActivity {
         return -1;
     }
 
+    public void dig(int n){
+
+        if(n >= cell_tvs.size() || n < 0){
+            return;
+        }
+        else if(visited[n] == true || cell_tvs.get(n).getText() == "@string/mine"){
+            return;
+        }
+        //if not visited, set as visited
+        visited[n] = true;
+        int count = 0;
+        cell_tvs.get(n).setBackgroundColor(Color.parseColor("gray"));
+
+        //check surrounding cells, if there is bomb, change text to number of bombs
+        if( n+1 >= 0 && n+1 < cell_tvs.size() && cell_tvs.get(n+1).getText() == "@string/mine"){
+            count++;
+        }
+        if(n-1 >= 0 && n-1 < cell_tvs.size() && cell_tvs.get(n-1).getText() == "@string/mine"){
+            count++;
+        }
+        if(n-10 >= 0 && n-10 <cell_tvs.size() && cell_tvs.get(n-10).getText() == "@string/mine"){
+            count++;
+        }
+        if(n+10 >= 0 && n+10 <cell_tvs.size() && cell_tvs.get(n+10).getText() == "@string/mine"){
+            count++;
+        }
+        if(n-11 >= 0 && n-11 <cell_tvs.size() && cell_tvs.get(n-11).getText() == "@string/mine"){
+            count++;
+        }
+        if(n+11 >= 0 && n+11 <cell_tvs.size() && cell_tvs.get(n+11).getText() == "@string/mine"){
+            count++;
+        }
+        if(n-9 >= 0 && n-9 <cell_tvs.size() && cell_tvs.get(n-9).getText() == "@string/mine"){
+            count++;
+        }
+        if(n+9 >= 0 && n+9 <cell_tvs.size() &&cell_tvs.get(n+9).getText() == "@string/mine"){
+            count++;
+        }
+
+        if(count > 0){
+            cell_tvs.get(n).setText(String.valueOf(count));
+            cell_tvs.get(n).setTextColor(Color.BLUE);
+        }
+
+        dig(n-11);
+        dig(n-10);
+        dig(n-9);
+        dig(n-1);
+        dig(n+10);
+        dig(n+1);
+        dig(n+9);
+        dig(n+11);
+
+    }
+
     public void onClickTV(View view){
         TextView tv = (TextView) view;
         int n = findIndexOfCellTextView(tv);
         int i = n/COLUMN_COUNT;
         int j = n%COLUMN_COUNT;
 
-        if(tv.getText() != "@string/mine"){
-            tv.setText(String.valueOf(i)+String.valueOf(j));
+//        if(tv.getText() != "@string/mine"){
+//            tv.setText(String.valueOf(i)+String.valueOf(j));
+//            tv.setText(String.valueOf(n));
+//        }
+
+        if(tv.getText() == "@string/mine"){
+            //game over --> clicked on a mine
+            tv.setBackgroundColor(Color.parseColor("red"));
+
+        }else{
+            //dig --> expose all adjacent cells that do not have bomb
+            //show number of mines if adjacent to any mines
+            tv.setBackgroundColor(Color.parseColor("gray"));
+            if(n!=-1){
+                dig(n);
+            }
+
+
         }
 
-        if (tv.getCurrentTextColor() == Color.GRAY) {
-            tv.setBackgroundColor(Color.parseColor("white"));
-        }
+//        if (tv.getCurrentTextColor() == Color.GRAY) {
+//            tv.setBackgroundColor(Color.parseColor("white"));
+//        }
     }
 
     public void placeMine(){
