@@ -819,37 +819,49 @@ public class MainActivity extends AppCompatActivity {
         //if not visited, set as visited
         visited[n] = true;
         int count = 0;
-        cell_tvs.get(n).setBackgroundColor(Color.parseColor("gray"));
+        cell_tvs.get(n).setBackgroundColor(Color.LTGRAY);
 
         //check surrounding cells, if there is bomb, change text to number of bombs
-        if( n+1 >= 0 && n+1 < cell_tvs.size() && cell_tvs.get(n+1).getText() == "@string/mine"){
+        if(n%COLUMN_COUNT != 9 && n+1 >= 0 && n+1 < cell_tvs.size() && cell_tvs.get(n+1).getText() == "@string/mine"){
             count++;
         }
-        if(n-1 >= 0 && n-1 < cell_tvs.size() && cell_tvs.get(n-1).getText() == "@string/mine"){
+        if(n%COLUMN_COUNT != 0 && n-1 >= 0 && n-1 < cell_tvs.size() && cell_tvs.get(n-1).getText() == "@string/mine"){
             count++;
         }
-        if(n-10 >= 0 && n-10 <cell_tvs.size() && cell_tvs.get(n-10).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 0 && n-10 >= 0 && n-10 <cell_tvs.size() && cell_tvs.get(n-10).getText() == "@string/mine"){
             count++;
         }
-        if(n+10 >= 0 && n+10 <cell_tvs.size() && cell_tvs.get(n+10).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 11 && n+10 >= 0 && n+10 <cell_tvs.size() && cell_tvs.get(n+10).getText() == "@string/mine"){
             count++;
         }
-        if(n-11 >= 0 && n-11 <cell_tvs.size() && cell_tvs.get(n-11).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 0 && n%COLUMN_COUNT != 0 && n-11 >= 0 && n-11 <cell_tvs.size() && cell_tvs.get(n-11).getText() == "@string/mine"){
             count++;
         }
-        if(n+11 >= 0 && n+11 <cell_tvs.size() && cell_tvs.get(n+11).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 11 && n%COLUMN_COUNT != 9 && n+11 >= 0 && n+11 <cell_tvs.size() && cell_tvs.get(n+11).getText() == "@string/mine"){
             count++;
         }
-        if(n-9 >= 0 && n-9 <cell_tvs.size() && cell_tvs.get(n-9).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 0 && n%COLUMN_COUNT != 9 && n-9 >= 0 && n-9 <cell_tvs.size() && cell_tvs.get(n-9).getText() == "@string/mine"){
             count++;
         }
-        if(n+9 >= 0 && n+9 <cell_tvs.size() &&cell_tvs.get(n+9).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 11 && n%COLUMN_COUNT != 0 && n+9 >= 0 && n+9 <cell_tvs.size() &&cell_tvs.get(n+9).getText() == "@string/mine"){
             count++;
         }
 
         if(count > 0){
             cell_tvs.get(n).setText(String.valueOf(count));
-            cell_tvs.get(n).setTextColor(Color.BLUE);
+            if(count == 1){
+                cell_tvs.get(n).setTextColor(Color.BLUE);
+            }
+            else if(count == 2){
+                cell_tvs.get(n).setTextColor(Color.MAGENTA);
+            }
+            else if(count == 3){
+                cell_tvs.get(n).setTextColor(Color.RED);
+            }
+            else if(count == 4){
+                cell_tvs.get(n).setTextColor(Color.CYAN);
+            }
+            return;
         }
 
         dig(n-11);
@@ -870,28 +882,22 @@ public class MainActivity extends AppCompatActivity {
         int j = n%COLUMN_COUNT;
 
 //        if(tv.getText() != "@string/mine"){
-//            tv.setText(String.valueOf(i)+String.valueOf(j));
+//            //tv.setText(String.valueOf(i)+String.valueOf(j));
 //            tv.setText(String.valueOf(n));
 //        }
 
         if(tv.getText() == "@string/mine"){
             //game over --> clicked on a mine
             tv.setBackgroundColor(Color.parseColor("red"));
-
+            tv.setTextColor(Color.GRAY);
         }else{
             //dig --> expose all adjacent cells that do not have bomb
             //show number of mines if adjacent to any mines
-            tv.setBackgroundColor(Color.parseColor("gray"));
+            tv.setBackgroundColor(Color.LTGRAY);
             if(n!=-1){
                 dig(n);
             }
-
-
         }
-
-//        if (tv.getCurrentTextColor() == Color.GRAY) {
-//            tv.setBackgroundColor(Color.parseColor("white"));
-//        }
     }
 
     public void placeMine(){
@@ -899,6 +905,6 @@ public class MainActivity extends AppCompatActivity {
         int randomNum = rand.nextInt((119 - 0) + 1);
 
         cell_tvs.get(randomNum).setText("@string/mine");
-        //cell_tvs.get(randomNum).setTextColor(Color.GREEN);
+        cell_tvs.get(randomNum).setTextColor(Color.GREEN);
     }
 }

@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clock"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal"
+        tools:ignore="MissingConstraints" />
+
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout01"
         android:layout_width="322dp"
@@ -21,16 +30,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rowCount="12">
-
-<!--        <TextView-->
-<!--            android:id="@+id/textViewClock"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:width="28dp"-->
-<!--            android:height="28dp"-->
-<!--            android:text="@string/clock"-->
-
-<!--        />-->
 
         <TextView
             android:id="@+id/textView00"
