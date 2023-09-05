@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     // when a TextView is clicked, we know which cell it is
     private ArrayList<TextView> cell_tvs;
     private boolean flagging;
-    private int flagsPosted = 0;
+    private int flagsLeft = 4;
     private boolean visited[];
 
     {
@@ -835,7 +835,10 @@ public class MainActivity extends AppCompatActivity {
         //if not visited, set as visited
         visited[n] = true;
         int count = 0;
-        cell_tvs.get(n).setBackgroundColor(Color.LTGRAY);
+
+        if(!cell_tvs.get(n).getText().equals("\uD83D\uDEA9") && !cell_tvs.get(n).getText().equals("\uD83D\uDEA9@")){
+            cell_tvs.get(n).setBackgroundColor(Color.LTGRAY);
+        }
 
         //check surrounding cells, if there is bomb, change text to number of bombs
         if(n%COLUMN_COUNT != 9 && n+1 >= 0 && n+1 < cell_tvs.size() && (cell_tvs.get(n+1).getText() == "@" || cell_tvs.get(n+1).getText() == "\uD83D\uDEA9@")){
@@ -905,6 +908,10 @@ public class MainActivity extends AppCompatActivity {
 //        } );
 //    }
 
+    private void flagCountChange(){
+
+    }
+
     public void onClickAction(View view){
         TextView tv = (TextView) view;
 
@@ -925,31 +932,23 @@ public class MainActivity extends AppCompatActivity {
         int i = n/COLUMN_COUNT;
         int j = n%COLUMN_COUNT;
 
-//        if(tv.getText() != "@string/mine"){
-//            //tv.setText(String.valueOf(i)+String.valueOf(j));
-//            tv.setText(String.valueOf(n));
-//        }
-       // System.out.print(cell_tvs.get(118).getText());
-
         if(flagging == false){
             if(tv.getText() == "\uD83D\uDEA9@"){
                 //nothing happens
+                //System.out.println("here");
             }
             else if(tv.getText() == "@"){
-                //game over --> clicked on a mine
+                //clicked on mine
                 tv.setText("\uD83D\uDCA3");
                 tv.setBackgroundColor(Color.parseColor("red"));
-                //tv.setTextColor(Color.GRAY);
+
                 for(int m=0; m<4; m++){
                     cell_tvs.get(mineLocations[m]).setText("\uD83D\uDCA3");
                     cell_tvs.get(mineLocations[m]).setBackgroundColor(Color.parseColor("red"));
-                    //cell_tvs.get(mineLocations[m]).setTextColor(Color.GRAY);
+
                 }
             }
             else if(tv.getText() != "\uD83D\uDCA3"){
-                //tv.setBackgroundColor(Color.parseColor("red"));
-                //dig --> expose all adjacent cells that do not have bomb
-                //show number of mines if adjacent to any mines
                 tv.setBackgroundColor(Color.LTGRAY);
                 if(n!=-1){
                     dig(n);
@@ -958,19 +957,31 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             //flagging mode
-            if(tv.getText() != "\uD83D\uDEA9" && visited[n] == false){
+            System.out.println(tv.getText());
+            if((tv.getText() != "\uD83D\uDEA9" && tv.getText() != "\uD83D\uDEA9@")&& visited[n] == false){
+                //has not been flagged
                 if(tv.getText() == "@"){
-                    System.out.println("BOMGFLAGGGG");
+                    System.out.println("1");
                     tv.setText("\uD83D\uDEA9@");
                 }
                 else{
+                    System.out.println("2");
                     tv.setText("\uD83D\uDEA9");
                 }
 
             }
-
+            else if(tv.getText() == "\uD83D\uDEA9"){
+                //has been flagged, not remove flag
+                System.out.println("3");
+                tv.setText("");
+                visited[n] = false;
+            }
+            else if(tv.getText() == "\uD83D\uDEA9@"){
+                System.out.println("4");
+                tv.setText("@");
+                tv.setTextColor(Color.GREEN);
+            }
         }
-
     }
 
     public void placeMine(int i){
