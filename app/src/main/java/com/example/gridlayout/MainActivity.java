@@ -7,6 +7,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
 import java.util.Random;
 
 import java.util.ArrayList;
@@ -18,11 +21,17 @@ public class MainActivity extends AppCompatActivity {
     // save the TextViews of all cells in an array, so later on,
     // when a TextView is clicked, we know which cell it is
     private ArrayList<TextView> cell_tvs;
-    boolean visited[];
+    private boolean flagging;
+    private int flagsPosted = 0;
+    private boolean visited[];
 
     {
         visited = new boolean[120];
 
+    }
+    int mineLocations [];
+    {
+        mineLocations = new int[4];
     }
 
     private int dpToPixel(int dp) {
@@ -793,9 +802,16 @@ public class MainActivity extends AppCompatActivity {
         cell_tvs.add(tv119);
 
         //________________________________
+
+        TextView digandflag = (TextView) findViewById(R.id.digandflag);
+        TextView flagText = (TextView) findViewById(R.id.flagText);
+        TextView clockText = (TextView) findViewById(R.id.clockText);
+
+        digandflag.setOnClickListener(this::onClickAction);
+
         //place 4 mines
         for(int i=0; i<4; i++){
-            placeMine();
+            placeMine(i);
         }
 
     }
@@ -813,7 +829,7 @@ public class MainActivity extends AppCompatActivity {
         if(n >= cell_tvs.size() || n < 0){
             return;
         }
-        else if(visited[n] == true || cell_tvs.get(n).getText() == "@string/mine"){
+        else if(visited[n] == true || cell_tvs.get(n).getText() == "@"){
             return;
         }
         //if not visited, set as visited
@@ -822,32 +838,32 @@ public class MainActivity extends AppCompatActivity {
         cell_tvs.get(n).setBackgroundColor(Color.LTGRAY);
 
         //check surrounding cells, if there is bomb, change text to number of bombs
-        if(n%COLUMN_COUNT != 9 && n+1 >= 0 && n+1 < cell_tvs.size() && cell_tvs.get(n+1).getText() == "@string/mine"){
+        if(n%COLUMN_COUNT != 9 && n+1 >= 0 && n+1 < cell_tvs.size() && (cell_tvs.get(n+1).getText() == "@" || cell_tvs.get(n+1).getText() == "\uD83D\uDEA9@")){
             count++;
         }
-        if(n%COLUMN_COUNT != 0 && n-1 >= 0 && n-1 < cell_tvs.size() && cell_tvs.get(n-1).getText() == "@string/mine"){
+        if(n%COLUMN_COUNT != 0 && n-1 >= 0 && n-1 < cell_tvs.size() && (cell_tvs.get(n-1).getText() == "@" || cell_tvs.get(n-1).getText() == "\uD83D\uDEA9@")){
             count++;
         }
-        if(n/COLUMN_COUNT != 0 && n-10 >= 0 && n-10 <cell_tvs.size() && cell_tvs.get(n-10).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 0 && n-10 >= 0 && n-10 <cell_tvs.size() && (cell_tvs.get(n-10).getText() == "@" || cell_tvs.get(n-10).getText() == "\uD83D\uDEA9@")){
             count++;
         }
-        if(n/COLUMN_COUNT != 11 && n+10 >= 0 && n+10 <cell_tvs.size() && cell_tvs.get(n+10).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 11 && n+10 >= 0 && n+10 <cell_tvs.size() && (cell_tvs.get(n+10).getText() == "@" || cell_tvs.get(n+10).getText() == "\uD83D\uDEA9@")){
             count++;
         }
-        if(n/COLUMN_COUNT != 0 && n%COLUMN_COUNT != 0 && n-11 >= 0 && n-11 <cell_tvs.size() && cell_tvs.get(n-11).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 0 && n%COLUMN_COUNT != 0 && n-11 >= 0 && n-11 <cell_tvs.size() && (cell_tvs.get(n-11).getText() == "@" || cell_tvs.get(n-11).getText() == "\uD83D\uDEA9@")){
             count++;
         }
-        if(n/COLUMN_COUNT != 11 && n%COLUMN_COUNT != 9 && n+11 >= 0 && n+11 <cell_tvs.size() && cell_tvs.get(n+11).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 11 && n%COLUMN_COUNT != 9 && n+11 >= 0 && n+11 <cell_tvs.size() && (cell_tvs.get(n+11).getText() == "@" || cell_tvs.get(n+11).getText() == "\uD83D\uDEA9@")){
             count++;
         }
-        if(n/COLUMN_COUNT != 0 && n%COLUMN_COUNT != 9 && n-9 >= 0 && n-9 <cell_tvs.size() && cell_tvs.get(n-9).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 0 && n%COLUMN_COUNT != 9 && n-9 >= 0 && n-9 <cell_tvs.size() && (cell_tvs.get(n-9).getText() == "@" || cell_tvs.get(n-9).getText() == "\uD83D\uDEA9@")){
             count++;
         }
-        if(n/COLUMN_COUNT != 11 && n%COLUMN_COUNT != 0 && n+9 >= 0 && n+9 <cell_tvs.size() &&cell_tvs.get(n+9).getText() == "@string/mine"){
+        if(n/COLUMN_COUNT != 11 && n%COLUMN_COUNT != 0 && n+9 >= 0 && n+9 <cell_tvs.size() && (cell_tvs.get(n+9).getText() == "@" || cell_tvs.get(n+9).getText() == "\uD83D\uDEA9@")){
             count++;
         }
 
-        if(count > 0){
+        if(count > 0 && !cell_tvs.get(n).getText().equals("\uD83D\uDEA9")){
             cell_tvs.get(n).setText(String.valueOf(count));
             if(count == 1){
                 cell_tvs.get(n).setTextColor(Color.BLUE);
@@ -875,6 +891,34 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+//    private void runTimer() {
+//        final TextView timeView = (TextView) findViewById(R.id.textViewClockNum);
+//        final Handler handler = new Handler();
+//        handler.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                int secs = seconds;
+//                timeView.setText(Integer.toString(secs));
+//                seconds++;
+//                handler.postDelayed(this,1000);
+//            }
+//        } );
+//    }
+
+    public void onClickAction(View view){
+        TextView tv = (TextView) view;
+
+        if(tv.getText().equals("⛏")){
+            tv.setText("\uD83D\uDEA9");
+            flagging = true;
+        }
+        else if(tv.getText().equals("\uD83D\uDEA9")) {
+            tv.setText("\u26CF");
+            flagging = false;
+        }
+
+    }
+
     public void onClickTV(View view){
         TextView tv = (TextView) view;
         int n = findIndexOfCellTextView(tv);
@@ -885,26 +929,55 @@ public class MainActivity extends AppCompatActivity {
 //            //tv.setText(String.valueOf(i)+String.valueOf(j));
 //            tv.setText(String.valueOf(n));
 //        }
+       // System.out.print(cell_tvs.get(118).getText());
 
-        if(tv.getText() == "@string/mine"){
-            //game over --> clicked on a mine
-            tv.setBackgroundColor(Color.parseColor("red"));
-            tv.setTextColor(Color.GRAY);
-        }else{
-            //dig --> expose all adjacent cells that do not have bomb
-            //show number of mines if adjacent to any mines
-            tv.setBackgroundColor(Color.LTGRAY);
-            if(n!=-1){
-                dig(n);
+        if(flagging == false){
+            if(tv.getText() == "\uD83D\uDEA9@"){
+                //nothing happens
+            }
+            else if(tv.getText() == "@"){
+                //game over --> clicked on a mine
+                tv.setText("\uD83D\uDCA3");
+                tv.setBackgroundColor(Color.parseColor("red"));
+                //tv.setTextColor(Color.GRAY);
+                for(int m=0; m<4; m++){
+                    cell_tvs.get(mineLocations[m]).setText("\uD83D\uDCA3");
+                    cell_tvs.get(mineLocations[m]).setBackgroundColor(Color.parseColor("red"));
+                    //cell_tvs.get(mineLocations[m]).setTextColor(Color.GRAY);
+                }
+            }
+            else if(tv.getText() != "\uD83D\uDCA3"){
+                //tv.setBackgroundColor(Color.parseColor("red"));
+                //dig --> expose all adjacent cells that do not have bomb
+                //show number of mines if adjacent to any mines
+                tv.setBackgroundColor(Color.LTGRAY);
+                if(n!=-1){
+                    dig(n);
+                }
             }
         }
+        else{
+            //flagging mode
+            if(tv.getText() != "\uD83D\uDEA9" && visited[n] == false){
+                if(tv.getText() == "@"){
+                    System.out.println("BOMGFLAGGGG");
+                    tv.setText("\uD83D\uDEA9@");
+                }
+                else{
+                    tv.setText("\uD83D\uDEA9");
+                }
+
+            }
+
+        }
+
     }
 
-    public void placeMine(){
+    public void placeMine(int i){
         Random rand = new Random();
         int randomNum = rand.nextInt((119 - 0) + 1);
-
-        cell_tvs.get(randomNum).setText("@string/mine");
+        mineLocations[i] = randomNum;
+        cell_tvs.get(randomNum).setText("@");
         cell_tvs.get(randomNum).setTextColor(Color.GREEN);
     }
 }

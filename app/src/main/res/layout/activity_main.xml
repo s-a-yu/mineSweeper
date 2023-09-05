@@ -6,19 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/clock"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal"
-        tools:ignore="MissingConstraints" />
-
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout01"
-        android:layout_width="322dp"
-        android:layout_height="385dp"
+        android:layout_width="319dp"
+        android:layout_height="383dp"
         android:layout_gravity="center"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
@@ -29,6 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545"
         app:rowCount="12">
 
         <TextView
@@ -1955,5 +1947,96 @@
             app:layout_row="11" />
 
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/digandflag"
+        android:layout_width="77dp"
+        android:layout_height="43dp"
+        android:width="64dp"
+        android:height="64dp"
+        android:text="@string/pick"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_column="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932"
+        app:layout_row="1" />
+
+    <TextView
+        android:id="@+id/flagCount"
+        android:layout_width="54dp"
+        android:layout_height="40dp"
+        android:width="64dp"
+        android:height="64dp"
+        android:text="@string/flag"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_column="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103"
+        app:layout_row="1" />
+
+    <TextView
+        android:id="@+id/clock"
+        android:layout_width="53dp"
+        android:layout_height="36dp"
+        android:width="64dp"
+        android:height="64dp"
+        android:text="@string/clock"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_column="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.595"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103"
+        app:layout_row="1" />
+
+    <TextView
+        android:id="@+id/clockText"
+        android:layout_width="55dp"
+        android:layout_height="37dp"
+        android:width="64dp"
+        android:height="64dp"
+        android:text="00"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_column="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.11"
+        app:layout_row="1" />
+
+    <TextView
+        android:id="@+id/flagText"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:width="64dp"
+        android:height="64dp"
+        android:text="4"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_column="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.11"
+        app:layout_row="1" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
