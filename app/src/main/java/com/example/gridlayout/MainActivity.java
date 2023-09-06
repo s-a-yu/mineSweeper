@@ -924,6 +924,11 @@ public class MainActivity extends AppCompatActivity {
         } );
     }
 
+    private void flagUpdate(){
+        final TextView flagView = (TextView) findViewById(R.id.flagText);
+        flagView.setText(Integer.toString(flagsLeft));
+    }
+
     public void onClickAction(View view){
         TextView tv = (TextView) view;
 
@@ -980,6 +985,7 @@ public class MainActivity extends AppCompatActivity {
                     tv.setText("\uD83D\uDEA9");
                 }
                 flagsLeft -= 1;
+                flagUpdate();
 
             }
             else if(tv.getText() == "\uD83D\uDEA9"){
@@ -988,14 +994,14 @@ public class MainActivity extends AppCompatActivity {
                 tv.setText("");
                 visited[n] = false;
                 flagsLeft += 1;
-
+                flagUpdate();
             }
             else if(tv.getText() == "\uD83D\uDEA9@"){
                 System.out.println("4");
                 tv.setText("@");
                 tv.setTextColor(Color.GREEN);
                 flagsLeft += 1;
-
+                flagUpdate();
             }
         }
     }
