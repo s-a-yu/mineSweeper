@@ -7,8 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.os.Handler;
 
-import org.w3c.dom.Text;
 
 import java.util.Random;
 
@@ -24,15 +24,17 @@ public class MainActivity extends AppCompatActivity {
     private boolean flagging;
     private int flagsLeft = 4;
     private boolean visited[];
-
     {
         visited = new boolean[120];
 
     }
-    int mineLocations [];
+    private int mineLocations [];
     {
         mineLocations = new int[4];
     }
+
+    private int clock = 0;
+    private boolean running = true;
 
     private int dpToPixel(int dp) {
         float density = Resources.getSystem().getDisplayMetrics().density;
@@ -45,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         cell_tvs = new ArrayList<TextView>();
+
+        if (savedInstanceState != null) {
+            clock = savedInstanceState.getInt("clock");
+            running = savedInstanceState.getBoolean("running");
+        }
+        runTimer();
 
         // Method (1): add statically created cells
         TextView tv00 = (TextView) findViewById(R.id.textView00);
@@ -804,8 +812,8 @@ public class MainActivity extends AppCompatActivity {
         //________________________________
 
         TextView digandflag = (TextView) findViewById(R.id.digandflag);
-        TextView flagText = (TextView) findViewById(R.id.flagText);
-        TextView clockText = (TextView) findViewById(R.id.clockText);
+//        TextView flagText = (TextView) findViewById(R.id.flagText);
+//        TextView clockText = (TextView) findViewById(R.id.clockText);
 
         digandflag.setOnClickListener(this::onClickAction);
 
@@ -813,7 +821,6 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0; i<4; i++){
             placeMine(i);
         }
-
     }
 
     private int findIndexOfCellTextView(TextView tv) {
@@ -894,22 +901,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    private void runTimer() {
-//        final TextView timeView = (TextView) findViewById(R.id.textViewClockNum);
-//        final Handler handler = new Handler();
-//        handler.post(new Runnable() {
-//            @Override
-//            public void run() {
-//                int secs = seconds;
-//                timeView.setText(Integer.toString(secs));
-//                seconds++;
-//                handler.postDelayed(this,1000);
-//            }
-//        } );
-//    }
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("clock", clock);
+        savedInstanceState.putBoolean("running", running);
+    }
 
-    private void flagCountChange(){
+    private void runTimer() {
+        final TextView timeView = (TextView) findViewById(R.id.clockText);
+        final Handler handler = new Handler();
 
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                int seconds = clock%60;
+                timeView.setText(Integer.toString(seconds));
+                if (running) {
+                    clock++;
+                }
+                handler.postDelayed(this, 1000);
+            }
+        } );
     }
 
     public void onClickAction(View view){
@@ -933,9 +945,8 @@ public class MainActivity extends AppCompatActivity {
         int j = n%COLUMN_COUNT;
 
         if(flagging == false){
-            if(tv.getText() == "\uD83D\uDEA9@"){
+            if(tv.getText() == "\uD83D\uDEA9@" || tv.getText() == "\uD83D\uDEA9"){
                 //nothing happens
-                //System.out.println("here");
             }
             else if(tv.getText() == "@"){
                 //clicked on mine
@@ -945,8 +956,8 @@ public class MainActivity extends AppCompatActivity {
                 for(int m=0; m<4; m++){
                     cell_tvs.get(mineLocations[m]).setText("\uD83D\uDCA3");
                     cell_tvs.get(mineLocations[m]).setBackgroundColor(Color.parseColor("red"));
-
                 }
+                running = false;
             }
             else if(tv.getText() != "\uD83D\uDCA3"){
                 tv.setBackgroundColor(Color.LTGRAY);
@@ -958,7 +969,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             //flagging mode
             System.out.println(tv.getText());
-            if((tv.getText() != "\uD83D\uDEA9" && tv.getText() != "\uD83D\uDEA9@")&& visited[n] == false){
+            if((tv.getText() != "\uD83D\uDEA9" && tv.getText() != "\uD83D\uDEA9@")&& visited[n] == false && flagsLeft != 0){
                 //has not been flagged
                 if(tv.getText() == "@"){
                     System.out.println("1");
@@ -968,6 +979,7 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("2");
                     tv.setText("\uD83D\uDEA9");
                 }
+                flagsLeft -= 1;
 
             }
             else if(tv.getText() == "\uD83D\uDEA9"){
@@ -975,11 +987,15 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("3");
                 tv.setText("");
                 visited[n] = false;
+                flagsLeft += 1;
+
             }
             else if(tv.getText() == "\uD83D\uDEA9@"){
                 System.out.println("4");
                 tv.setText("@");
                 tv.setTextColor(Color.GREEN);
+                flagsLeft += 1;
+
             }
         }
     }
