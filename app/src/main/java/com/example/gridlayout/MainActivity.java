@@ -981,6 +981,7 @@ public class MainActivity extends AppCompatActivity {
                     cell_tvs.get(mineLocations[m]).setBackgroundColor(Color.parseColor("red"));
                 }
                 running = false;
+                sendLossMessage();
             }
             else if(tv.getText() != "\uD83D\uDCA3"){
                 tv.setBackgroundColor(Color.LTGRAY);
@@ -1037,6 +1038,15 @@ public class MainActivity extends AppCompatActivity {
         String message = "Used " + time.getText() +" seconds.";
 
         Intent intent = new Intent(this, DisplayEndGame.class);
+        intent.putExtra("com.example.sendmessage.MESSAGE", message);
+
+        startActivity(intent);
+    }
+
+    public void sendLossMessage(){
+        TextView time = (TextView) findViewById(R.id.clockText);
+        String message = "Used " + time.getText() +" seconds.";
+        Intent intent = new Intent(this, DisplayLoss.class);
         intent.putExtra("com.example.sendmessage.MESSAGE", message);
 
         startActivity(intent);

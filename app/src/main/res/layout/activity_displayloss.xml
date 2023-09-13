@@ -28,7 +28,7 @@
         android:layout_marginTop="468dp"
         android:layout_marginEnd="32dp"
         android:onClick="backToMain"
-        android:text="Play Again"
+        android:text="Try Again"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
