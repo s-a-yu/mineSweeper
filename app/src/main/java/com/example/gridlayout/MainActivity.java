@@ -1034,7 +1034,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendWinMessage(){
         TextView time = (TextView) findViewById(R.id.clockText);
-        String message = "Used " + time.getText() +" seconds.You won. Good job!";
+        String message = "Used " + time.getText() +" seconds.";
 
         Intent intent = new Intent(this, DisplayEndGame.class);
         intent.putExtra("com.example.sendmessage.MESSAGE", message);

@@ -15,7 +15,7 @@ public class DisplayEndGame extends AppCompatActivity{
 
         Intent intent = getIntent();
         String message = intent.getStringExtra("com.example.sendmessage.MESSAGE");
-        //message = message + " : Fight On!";
+        message = message + "\n You won. \n Good job!";
 
         TextView textView = (TextView) findViewById(R.id.textView);
         textView.setText(message);
