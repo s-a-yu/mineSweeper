@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.os.Handler;
+import android.content.Intent;
 
 
 import java.util.Random;
@@ -943,6 +944,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public boolean checkWin(){
+        //check all bombs have been flagged
+        for(int i=0; i<4; i++){
+            if(!cell_tvs.get(mineLocations[i]).getText().equals("\uD83D\uDEA9@")){
+                return false;
+            }
+        }
+
+        //check all un-flagged cells have been visited
+        for(int i=0; i<120; i++){
+           if((!cell_tvs.get(i).getText().equals("\uD83D\uDEA9@") && !cell_tvs.get(i).getText().equals("\uD83D\uDEA9") && visited[i] == false)){
+                return false;
+           }
+        }
+        return true;
+    }
+
     public void onClickTV(View view){
         TextView tv = (TextView) view;
         int n = findIndexOfCellTextView(tv);
@@ -1004,6 +1022,24 @@ public class MainActivity extends AppCompatActivity {
                 flagUpdate();
             }
         }
+
+        if(flagsLeft == 0){
+            boolean win = checkWin();
+            if(win){
+                running = false;
+                sendWinMessage();
+            }
+        }
+    }
+
+    public void sendWinMessage(){
+        TextView time = (TextView) findViewById(R.id.clockText);
+        String message = "Used " + time.getText() +" seconds.You won. Good job!";
+
+        Intent intent = new Intent(this, DisplayEndGame.class);
+        intent.putExtra("com.example.sendmessage.MESSAGE", message);
+
+        startActivity(intent);
     }
 
     public void placeMine(int i){
