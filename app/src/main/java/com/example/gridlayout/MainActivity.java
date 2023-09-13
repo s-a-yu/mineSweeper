@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
     private int clock = 0;
     private boolean running = true;
+    private int visitedCount = 0;
+    private boolean displayWin = false;
+    private boolean displayLoss = false;
 
     private int dpToPixel(int dp) {
         float density = Resources.getSystem().getDisplayMetrics().density;
@@ -842,6 +845,7 @@ public class MainActivity extends AppCompatActivity {
         }
         //if not visited, set as visited
         visited[n] = true;
+        visitedCount++;
         int count = 0;
 
         if(!cell_tvs.get(n).getText().equals("\uD83D\uDEA9") && !cell_tvs.get(n).getText().equals("\uD83D\uDEA9@")){
@@ -967,6 +971,27 @@ public class MainActivity extends AppCompatActivity {
         int i = n/COLUMN_COUNT;
         int j = n%COLUMN_COUNT;
 
+        System.out.println(visitedCount);
+        if(visitedCount == 116){
+            System.out.println("WINNNNNNN");
+            boolean winQ = true;
+            for(int m=0; m<4; m++){
+                if(visited[mineLocations[m]] == true){
+                    winQ = false;
+                }
+            }
+            if(winQ){
+                //send win message after clicking somewhere
+                displayWin = true;
+            }
+        }
+        if(displayLoss){
+            sendLossMessage();
+        }
+        if(displayWin){
+            sendWinMessage();
+        }
+
         if(flagging == false){
             if(tv.getText() == "\uD83D\uDEA9@" || tv.getText() == "\uD83D\uDEA9"){
                 //nothing happens
@@ -981,7 +1006,7 @@ public class MainActivity extends AppCompatActivity {
                     cell_tvs.get(mineLocations[m]).setBackgroundColor(Color.parseColor("red"));
                 }
                 running = false;
-                sendLossMessage();
+                displayLoss = true;
             }
             else if(tv.getText() != "\uD83D\uDCA3"){
                 tv.setBackgroundColor(Color.LTGRAY);
@@ -1011,7 +1036,7 @@ public class MainActivity extends AppCompatActivity {
                 //has been flagged, not remove flag
                 System.out.println("3");
                 tv.setText("");
-                visited[n] = false;
+                //visited[n] = false;
                 flagsLeft += 1;
                 flagUpdate();
             }
@@ -1028,7 +1053,12 @@ public class MainActivity extends AppCompatActivity {
             boolean win = checkWin();
             if(win){
                 running = false;
-                sendWinMessage();
+                //display location of mines even if they win
+                for(int m=0; m<4; m++){
+                    cell_tvs.get(mineLocations[m]).setText("\uD83D\uDCA3");
+                    cell_tvs.get(mineLocations[m]).setBackgroundColor(Color.parseColor("red"));
+                }
+                displayWin = true;
             }
         }
     }
@@ -1055,6 +1085,13 @@ public class MainActivity extends AppCompatActivity {
     public void placeMine(int i){
         Random rand = new Random();
         int randomNum = rand.nextInt((119 - 0) + 1);
+        for(int j=0; j<4; j++){
+            while(randomNum == mineLocations[j]){
+                Random rand2 = new Random();
+                randomNum = rand2.nextInt((119 - 0) + 1);
+                System.out.println("duplicate#########");
+            }
+        }
         mineLocations[i] = randomNum;
         cell_tvs.get(randomNum).setText("@");
         cell_tvs.get(randomNum).setTextColor(Color.GREEN);
