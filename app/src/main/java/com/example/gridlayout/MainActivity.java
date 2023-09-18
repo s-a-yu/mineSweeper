@@ -971,9 +971,14 @@ public class MainActivity extends AppCompatActivity {
         int i = n/COLUMN_COUNT;
         int j = n%COLUMN_COUNT;
 
-        System.out.println(visitedCount);
+        //System.out.println(visitedCount);
         if(visitedCount == 116){
-            System.out.println("WINNNNNNN");
+            for(int m=0; m<4; m++){
+                cell_tvs.get(mineLocations[m]).setText("\uD83D\uDCA3");
+                cell_tvs.get(mineLocations[m]).setBackgroundColor(Color.parseColor("red"));
+            }
+            onClickAction(view);
+
             boolean winQ = true;
             for(int m=0; m<4; m++){
                 if(visited[mineLocations[m]] == true){
@@ -1018,7 +1023,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             //flagging mode
             System.out.println(tv.getText());
-            if((tv.getText() != "\uD83D\uDEA9" && tv.getText() != "\uD83D\uDEA9@")&& visited[n] == false && flagsLeft != 0){
+            if((tv.getText() != "\uD83D\uDEA9" && tv.getText() != "\uD83D\uDEA9@")&& visited[n] == false){
                 //has not been flagged
                 if(tv.getText() == "@"){
                     System.out.println("1");
@@ -1037,15 +1042,19 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("3");
                 tv.setText("");
                 //visited[n] = false;
-                flagsLeft += 1;
-                flagUpdate();
+                if(flagsLeft < 4){
+                    flagsLeft += 1;
+                    flagUpdate();
+                }
             }
             else if(tv.getText() == "\uD83D\uDEA9@"){
                 System.out.println("4");
                 tv.setText("@");
                 tv.setTextColor(Color.GREEN);
-                flagsLeft += 1;
-                flagUpdate();
+                if(flagsLeft < 4) {
+                    flagsLeft += 1;
+                    flagUpdate();
+                }
             }
         }
 
