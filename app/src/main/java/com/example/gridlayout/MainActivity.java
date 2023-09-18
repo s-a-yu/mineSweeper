@@ -971,13 +971,17 @@ public class MainActivity extends AppCompatActivity {
         int i = n/COLUMN_COUNT;
         int j = n%COLUMN_COUNT;
 
-        //System.out.println(visitedCount);
+        if(displayLoss){
+            sendLossMessage();
+        }
+        if(displayWin){
+            sendWinMessage();
+        }
         if(visitedCount == 116){
             for(int m=0; m<4; m++){
                 cell_tvs.get(mineLocations[m]).setText("\uD83D\uDCA3");
                 cell_tvs.get(mineLocations[m]).setBackgroundColor(Color.parseColor("red"));
             }
-            onClickAction(view);
 
             boolean winQ = true;
             for(int m=0; m<4; m++){
@@ -989,12 +993,6 @@ public class MainActivity extends AppCompatActivity {
                 //send win message after clicking somewhere
                 displayWin = true;
             }
-        }
-        if(displayLoss){
-            sendLossMessage();
-        }
-        if(displayWin){
-            sendWinMessage();
         }
 
         if(flagging == false){
