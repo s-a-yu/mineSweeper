@@ -978,11 +978,6 @@ public class MainActivity extends AppCompatActivity {
             sendWinMessage();
         }
         if(visitedCount == 116){
-            for(int m=0; m<4; m++){
-                cell_tvs.get(mineLocations[m]).setText("\uD83D\uDCA3");
-                cell_tvs.get(mineLocations[m]).setBackgroundColor(Color.parseColor("red"));
-            }
-
             boolean winQ = true;
             for(int m=0; m<4; m++){
                 if(visited[mineLocations[m]] == true){
@@ -991,6 +986,10 @@ public class MainActivity extends AppCompatActivity {
             }
             if(winQ){
                 //send win message after clicking somewhere
+                for(int m=0; m<4; m++){
+                    cell_tvs.get(mineLocations[m]).setText("\uD83D\uDCA3");
+                    cell_tvs.get(mineLocations[m]).setBackgroundColor(Color.parseColor("red"));
+                }
                 displayWin = true;
             }
         }
@@ -1024,29 +1023,30 @@ public class MainActivity extends AppCompatActivity {
             if((tv.getText() != "\uD83D\uDEA9" && tv.getText() != "\uD83D\uDEA9@")&& visited[n] == false){
                 //has not been flagged
                 if(tv.getText() == "@"){
-                    System.out.println("1");
                     tv.setText("\uD83D\uDEA9@");
+                    flagsLeft -= 1;
+                    flagUpdate();
                 }
-                else{
-                    System.out.println("2");
+                else if(tv.getText() != "\uD83D\uDCA3"){
                     tv.setText("\uD83D\uDEA9");
+                    flagsLeft -= 1;
+                    flagUpdate();
                 }
-                flagsLeft -= 1;
-                flagUpdate();
+//                flagsLeft -= 1;
+//                flagUpdate();
 
             }
             else if(tv.getText() == "\uD83D\uDEA9"){
-                //has been flagged, not remove flag
-                System.out.println("3");
+                //has been flagged, now remove flag
                 tv.setText("");
-                //visited[n] = false;
+//                visited[n] = false;
+//                visitedCount++;
                 if(flagsLeft < 4){
                     flagsLeft += 1;
                     flagUpdate();
                 }
             }
             else if(tv.getText() == "\uD83D\uDEA9@"){
-                System.out.println("4");
                 tv.setText("@");
                 tv.setTextColor(Color.GREEN);
                 if(flagsLeft < 4) {
